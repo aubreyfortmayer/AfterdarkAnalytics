@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
         {/*Section 2: Intro*/}
-        <div className="flex justify-end w-full">
+        <div id="intro" className="flex justify-end w-full">
             <img 
                 src={IntroSection}
                 alt=""
