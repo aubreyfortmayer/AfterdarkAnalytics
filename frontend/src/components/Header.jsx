@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 w-full">
-            {/*Background pink glitter image with star logo*/}
+        //TO DO: If I want to make the header sticky add this: sticky top-0 z-50 instead of relative
+        <header className="relative w-full">
+            {/*Header background pink glitter image*/}
             <img 
                 src={HeaderBackground}
                 alt=""
