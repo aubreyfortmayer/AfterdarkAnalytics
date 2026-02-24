@@ -32,7 +32,7 @@ return (
         src = {MusicButton}
         alt="set the mood"
         // onClick = {playMusic}
-        className = "cursor-pointer hover:scale-105 transition"
+        className = "w-[180px] h-auto"
         />
         {/* <audio ref = {audio} src = {goingOutSong} /> */}
     </div>
