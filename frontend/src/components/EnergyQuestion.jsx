@@ -7,12 +7,15 @@ import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
 import { useState } from "react";
 
+//Energy question function
 export default function EnergyQuestion() {
+    //selectedMood = "", initalizing state
     const [selectedMood, setSelectedMood] = useState("");
-  
+    //Mood Options
+    //JS array of objects (moods)
     const moodOptions = [
       {
-        label: "Exhuasted",
+        label: "Exhausted",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
       },
@@ -39,26 +42,39 @@ export default function EnergyQuestion() {
     ];
   
     return (
-        //buttons parent div container
-        <div className="flex flex-col gap-1 w-full items-start mt-10 ml-10">
-    
+        //Buttons parent div container
+        <div className="flex flex-col w-full items-start ml-[clamp(16px,4vw,60px)]">
+          
+          {/*For every object inside moodOptions array this creates a button*/}
           {moodOptions.map((option) => {
             const isSelected = selectedMood === option.label;
+            
+            //Heart image that is displayed
+            let heartImage;
+            if (isSelected) {
+              heartImage = option.clicked;} 
+              else {
+              heartImage = option.unclicked; }
     
             return (
-              //buttons divs
+              //Buttons divs
               <button
                 key={option.label}
                 type="button"
-                onClick={() => setSelectedMood(option.label)}
+                //When clicked, it updates the state and logs which energy was selected
+                onClick={() => {
+                  setSelectedMood(option.label);
+                  console.log("Selected energy:", option.label);
+                }}
                 className="flex gap-4 w-full cursor-pointer"
               >
-                <img
-                  src={isSelected ? option.clicked : option.unclicked}
-                  alt=""
-                  className="h-[clamp(30px,6vw,60px)]"
-                />
-                <span className="mt-3 text-lg text-[#FCDDEC] font-['Emilys_Candy']">{option.label}</span>
+                {/*Button heart images*/}
+                  <img
+                    src={heartImage}
+                    alt="heart button"
+                    className="h-[clamp(15px,4.5vw,60px)]"
+                  />
+                  <span className=" text-[clamp(11px,3vw,35px)] text-[#FCDDEC] font-['Emilys_Candy']">{option.label}</span>
               </button>
             );
           })}

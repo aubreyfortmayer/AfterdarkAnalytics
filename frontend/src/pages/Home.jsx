@@ -36,16 +36,19 @@ export default function Home() {
         {/*Section 3: User Input Questions*/}
 
         {/*Question Background div*/}
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center mb-100">
 
             <img 
                 src={Question1}
                 alt=""
-                className="h-[clamp(200px,40vw,550px)]"
+                className="h-[clamp(200px,42vw,550px)]"
             />
 
-            {/*Div container for button divs*/}
+            {/*Div container for button divs to be on top of the question 1 background image*/}
             <div className="absolute inset-0">
+                <h1 className="ml-[clamp(16px,4vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
+                Before *potentially* going out tonight,  <br /> what’s your vibe?
+                </h1>
                 <EnergyQuestion />
             </div>
         </div>
