@@ -1,6 +1,9 @@
 import Title1 from "../assets/AfterDarkText.png";
 import Title2 from "../assets/AnalyticsText.png";
 import IntroSection from "../assets/IntroSection.png";
+import Question1 from "../assets/1stQuestion.png";
+import EnergyQuestion from "../components/EnergyQuestion";
+
 
 export default function Home() {
     return (
@@ -30,6 +33,24 @@ export default function Home() {
 
         </div>
 
+        {/*Section 3: User Input Questions*/}
+
+        {/*Question Background div*/}
+        <div className="relative flex justify-center">
+
+            <img 
+                src={Question1}
+                alt=""
+                className="h-[clamp(200px,40vw,550px)]"
+            />
+
+            {/*Div container for button divs*/}
+            <div className="absolute inset-0">
+                <EnergyQuestion />
+            </div>
+        </div>
+
+        
         </div>
     );
 }
