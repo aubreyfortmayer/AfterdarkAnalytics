@@ -1,103 +1,153 @@
-"Timestamp","Name","Are you going out tonight?","Current Year at UF","Gender","Age Range","Energy Level Before Going Out (Throughout the Day)","Responsibility Level Before Going Out (Throughout the Day)","Mood Level Before Going Out (Throughout the Day)","Forecasted Weather","Would a website that helps you decide whether or not to go out be helpful for you?"
-"2026/01/24 8:35:52 PM EST","Sydney","Yes","Junior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Stressed","Cold","Yes"
-"2026/01/24 8:36:48 PM EST","Kassandra","Yes","Junior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/24 8:37:46 PM EST","Stella","Yes","Senior","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Relaxed","Cold","Yes"
-"2026/01/28 3:27:44 PM EST","Victoria Rios Narvaez","No","Senior","Female","22-23","Energized","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/28 3:32:31 PM EST","Rebecca Reich","Yes","Senior","Female","22-23","Neutral","Medium (Deadlines in the next week)","Neutral","Warm","Yes"
-"2026/01/28 3:34:53 PM EST","Olivia Luque","No","Senior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/28 3:36:58 PM EST","Camila Cruz","No","Senior","Female","22-23","Neutral","Medium (Deadlines in the next week)","Relaxed","Cold","No"
-"2026/01/28 3:37:33 PM EST","sana sopariwala","No","Senior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Stressed","Cold","Yes"
-"2026/01/28 3:40:59 PM EST","Carlos Guerra","No","Senior","Male","20-21","Energized","Medium (Deadlines in the next week)","Neutral","Cold","No"
-"2026/01/28 3:53:16 PM EST","sam","No","Senior","Female","20-21","Energized","Low (No deadlines in the next week)","Happy","Warm","Yes"
-"2026/01/28 4:03:13 PM EST","MJ Sarmiento","Yes","5th Year Senior +","Female","22-23","Neutral","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/28 4:25:09 PM EST","Matthew White","No","Senior","Male","20-21","Low Energy","High (Deadlines in the next 3 days)","Relaxed","Clear Skies","Yes"
-"2026/01/28 4:33:11 PM EST","Caitlyn Daniels","No","Grad Student","Female","22-23","Low Energy","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/28 4:41:33 PM EST","MJ","No","5th Year Senior +","Female","22-23","Neutral","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/01/28 4:50:36 PM EST","Toni Caselles","No","Grad Student","Male","24 +","Neutral","Medium (Deadlines in the next week)","Neutral","Cold","No"
-"2026/01/28 4:57:09 PM EST","Jessica Garcete","No","Senior","Female","22-23","Low Energy","High (Deadlines in the next 3 days)","Stressed","Cold","Yes"
-"2026/01/28 5:59:47 PM EST","luna espinoza ","No","Senior","Female","20-21","Neutral","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/28 7:25:44 PM EST","Renata Hanley","No","Senior","Female","20-21","Energized","High (Deadlines in the next 3 days)","Neutral","Clear Skies","Yes"
-"2026/01/28 10:57:24 PM EST","Clarisa","No","Senior","Female","20-21","Energized","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/28 11:23:56 PM EST","Aubrey Fortmayer","Yes","Senior","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Stressed","Cold","Yes"
-"2026/01/28 11:26:05 PM EST","Sarah","Yes","Senior","Female","22-23","Exhausted","High (Deadlines in the next 3 days)","Relaxed","Cold","Yes"
-"2026/01/28 11:26:43 PM EST","matt","Yes","Senior","Male","22-23","Neutral","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/01/28 11:28:49 PM EST","Emily Salmonsen","No","Senior","Female","22-23","Extremely Energized","Medium (Deadlines in the next week)","Happy","Warm","Yes"
-"2026/01/28 11:29:54 PM EST","Isabel Cannella","No","Senior","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Stressed","Cold","Yes"
-"2026/01/28 11:38:51 PM EST","Devin Mohr","Yes","Grad Student","Male","22-23","Extremely Energized","High (Deadlines in the next 3 days)","Happy","Clear Skies","Yes"
-"2026/01/28 11:39:26 PM EST","josiah ","Yes","Senior","Male","20-21","Neutral","Medium (Deadlines in the next week)","Relaxed","Cold","Yes"
-"2026/01/28 11:46:47 PM EST","david silva","Yes","Junior","Male","20-21","Neutral","High (Deadlines in the next 3 days)","Neutral","Cold","No"
-"2026/01/28 11:47:20 PM EST","savannah ","Yes","Senior","Female","20-21","Low Energy","Low (No deadlines in the next week)","Relaxed","Cold","No"
-"2026/01/28 11:47:58 PM EST","eva ","Yes","Junior","Female","20-21","Energized","Medium (Deadlines in the next week)","Relaxed","Cold","No"
-"2026/01/28 11:51:40 PM EST","lawton vargo","Yes","Junior","Male","20-21","Energized","Medium (Deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/28 11:52:25 PM EST","","Yes","Junior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Happy","Warm","Yes"
-"2026/01/28 11:53:14 PM EST","Lebron","No","5th Year Senior +","Prefer Not to Say","24 +","Extremely Energized","High (Deadlines in the next 3 days)","Stressed","Rain","No"
-"2026/01/28 11:55:56 PM EST","dwayne","Yes","Senior","Male","22-23","Neutral","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/01/28 11:56:42 PM EST","jack","Yes","Sophomore","Male","22-23","Neutral","Low (No deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/29 12:04:48 AM EST","nicolas galofre","Yes","Grad Student","Non-binary","22-23","Energized","Medium (Deadlines in the next week)","Relaxed","Cold","Yes"
-"2026/01/29 12:06:47 AM EST","delia ","Yes","Senior","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Happy","Warm","Yes"
-"2026/01/29 12:13:22 AM EST","reed hawke","Yes","Senior","Male","22-23","Neutral","Medium (Deadlines in the next week)","Happy","Cold","No"
-"2026/01/29 12:14:16 AM EST","jashton hunter","Yes","Senior","Male","20-21","Exhausted","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/01/29 12:15:29 AM EST","jackson king","Yes","Sophomore","Male","20-21","Low Energy","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/01/29 12:16:07 AM EST","Chad Powers","Yes","Senior","Male","22-23","Exhausted","High (Deadlines in the next 3 days)","Stressed","Cold","No"
-"2026/01/29 12:21:06 AM EST","isaac zerdoun","Yes","Senior","Male","22-23","Neutral","High (Deadlines in the next 3 days)","Relaxed","Cold","Yes"
-"2026/01/29 12:21:32 AM EST","jared","Yes","Junior","Male","20-21","Exhausted","High (Deadlines in the next 3 days)","Stressed","Clear Skies","Yes"
-"2026/01/29 12:23:57 AM EST","kalista netzley","Yes","Junior","Female","20-21","Low Energy","High (Deadlines in the next 3 days)","Neutral","Cold",""
-"2026/01/29 12:24:48 AM EST","colin petruzzelli","Yes","Junior","Male","20-21","Energized","Low (No deadlines in the next week)","Relaxed","Cold","Yes"
-"2026/01/29 12:27:14 AM EST","j money ","Yes","5th Year Senior +","Non-binary","24 +","Extremely Energized","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/29 12:36:58 AM EST","javier","Yes","Senior","Male","20-21","Energized","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/29 12:38:52 AM EST","albert","Yes","Senior","Male","20-21","Energized","High (Deadlines in the next 3 days)","Neutral","Warm","No"
-"2026/01/29 12:42:48 AM EST","Juli  Quintero","","Freshman","Female","","Exhausted","Low (No deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/29 12:43:20 AM EST","samir","Yes","Freshman","Male","18-19","Energized","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/01/29 12:45:58 AM EST","Fer","Yes","Junior","Female","20-21","Energized","High (Deadlines in the next 3 days)","Stressed","Rain","Yes"
-"2026/01/29 12:49:27 AM EST","joaquin breslin","Yes","Senior","Male","22-23","Energized","Medium (Deadlines in the next week)","Happy","Clear Skies","No"
-"2026/01/29 1:17:05 AM EST","eugenio","Yes","Senior","Male","20-21","Energized","Low (No deadlines in the next week)","Happy","Warm","No"
-"2026/01/29 2:03:09 AM EST","Sergio Caño Amor","Yes","Grad Student","Male","24 +","Neutral","Low (No deadlines in the next week)","Happy","Rain","Yes"
-"2026/01/29 9:35:13 AM EST","Katherine Bouck","No","Senior","Female","22-23","Neutral","High (Deadlines in the next 3 days)","Relaxed","Cold","Yes"
-"2026/01/29 12:14:26 PM EST","Jillian Kessler","No","Grad Student","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/02/06 11:03:51 PM EST","Catalina Mendez","Yes","Senior","Female","22-23","Exhausted","High (Deadlines in the next 3 days)","Happy","Cold","Yes"
-"2026/02/06 11:04:49 PM EST","Florencia ","Yes","Senior","Female","20-21","Low Energy","High (Deadlines in the next 3 days)","Happy","Cold","Yes"
-"2026/02/06 11:49:54 PM EST","Marina Chen","Yes","Senior","Female","20-21","Extremely Energized","High (Deadlines in the next 3 days)","Happy","Clear Skies","Yes"
-"2026/02/06 11:59:55 PM EST","connoe","Yes","Senior","Male","22-23","Energized","Low (No deadlines in the next week)","Relaxed","Cold","Yes"
-"2026/02/07 12:08:26 AM EST","carlos ","Yes","Senior","Non-binary","24 +","Extremely Energized","High (Deadlines in the next 3 days)","Happy","Warm","Yes"
-"2026/02/07 12:10:49 AM EST","joe","Yes","Senior","Male","22-23","Extremely Energized","High (Deadlines in the next 3 days)","Stressed","Clear Skies","Yes"
-"2026/02/07 12:12:54 AM EST","adrian rayas ","Yes","Senior","Male","22-23","Neutral","Medium (Deadlines in the next week)","Happy","Cold","Yes"
-"2026/02/07 12:19:59 AM EST","alex","Yes","Junior","Male","20-21","Low Energy","Low (No deadlines in the next week)","Relaxed","Cold","No"
-"2026/02/07 12:20:54 AM EST","hemal dubbolla","Yes","Junior","Male","20-21","Neutral","Medium (Deadlines in the next week)","Happy","Cold","No"
-"2026/02/07 12:25:20 AM EST","Ariana","Yes","Junior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/07 12:26:02 AM EST","maddie ","Yes","Junior","Female","20-21","Low Energy","Medium (Deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/07 12:26:38 AM EST","","Yes","Junior","Female","20-21","Neutral","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/07 12:27:39 AM EST","Bernie","Yes","Junior","Male","20-21","Exhausted","Low (No deadlines in the next week)","Neutral","Cold","No"
-"2026/02/07 12:29:48 AM EST","Alessandro Giusti","Yes","5th Year Senior +","Male","22-23","Extremely Energized","Low (No deadlines in the next week)","Neutral","Clear Skies","Yes"
-"2026/02/07 12:31:10 AM EST","Lean Drox ","Yes","Grad Student","Male","22-23","Energized","High (Deadlines in the next 3 days)","Happy","Cold","Yes"
-"2026/02/07 12:37:04 AM EST","Nico Pateras","Yes","Junior","Male","22-23","Energized","Medium (Deadlines in the next week)","Relaxed","Cold","Yes"
-"2026/02/07 12:38:23 AM EST","andrew collhan ","Yes","Senior","Non-binary","20-21","Low Energy","Low (No deadlines in the next week)","Stressed","Cold","Yes"
-"2026/02/07 12:39:46 AM EST","jonathan ","Yes","Senior","Male","20-21","Neutral","Medium (Deadlines in the next week)","Happy","Clear Skies","No"
-"2026/02/07 12:40:57 AM EST","Filippo Grassi","No","5th Year Senior +","Male","22-23","Exhausted","Low (No deadlines in the next week)","Sad","Cold","Yes"
-"2026/02/07 12:42:31 AM EST","mari","Yes","Freshman","Male","18-19","Exhausted","High (Deadlines in the next 3 days)","Stressed","Cold","No"
-"2026/02/07 12:43:35 AM EST","KJ","Yes","Freshman","Male","18-19","Neutral","Medium (Deadlines in the next week)","Sad","Cold","Yes"
-"2026/02/07 12:45:12 AM EST","zak","Yes","Senior","Male","22-23","Energized","Medium (Deadlines in the next week)","Neutral","Warm","Yes"
-"2026/02/07 12:46:42 AM EST","Bernando Carlos ","Yes","Senior","Male","22-23","Energized","Low (No deadlines in the next week)","Relaxed","Warm","Yes"
-"2026/02/07 12:59:25 AM EST","charlize ","Yes","Junior","Female","20-21","Neutral","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/07 1:00:08 AM EST","salo","Yes","Senior","Female","20-21","Energized","Low (No deadlines in the next week)","Relaxed","Clear Skies","Yes"
-"2026/02/07 1:01:05 AM EST","mazilyn tinnell","Yes","Senior","Female","22-23","Neutral","High (Deadlines in the next 3 days)","Stressed","Cold","Yes"
-"2026/02/07 1:01:38 AM EST","lizzie ","Yes","Junior","Female","20-21","Energized","Medium (Deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/07 1:03:19 AM EST","merritt weinberg","Yes","Junior","Male","20-21","Low Energy","High (Deadlines in the next 3 days)","Relaxed","Cold","Yes"
-"2026/02/07 1:10:27 AM EST","jerry","Yes","Senior","Male","20-21","Exhausted","High (Deadlines in the next 3 days)","Stressed","Clear Skies","Yes"
-"2026/02/07 1:11:28 AM EST","gabe B","Yes","Senior","Male","22-23","Energized","High (Deadlines in the next 3 days)","Neutral","Cold","Yes"
-"2026/02/07 1:44:20 AM EST","","Yes","Senior","Female","20-21","Energized","High (Deadlines in the next 3 days)","Relaxed","Clear Skies","No"
-"2026/02/07 1:45:05 AM EST","bernardo","Yes","Sophomore","Male","18-19","Neutral","Low (No deadlines in the next week)","Stressed","Cold","No"
-"2026/02/07 1:45:35 AM EST","sam schmidtje ","Yes","Freshman","Male","20-21","Neutral","High (Deadlines in the next 3 days)","Happy","Clear Skies","Yes"
-"2026/02/09 11:40:11 AM EST","Jonas","No","Grad Student","Male","24 +","Low Energy","Medium (Deadlines in the next week)","Neutral","Cold","No"
-"2026/02/13 7:48:09 PM EST","Nancy ","No","Sophomore","Female","18-19","Low Energy","Medium (Deadlines in the next week)","Neutral","Warm","Yes"
-"2026/02/13 7:48:35 PM EST","Hailey","No","Freshman","Female","18-19","Exhausted","High (Deadlines in the next 3 days)","Stressed","Warm","Yes"
-"2026/02/13 7:49:05 PM EST","Jade","No","Senior","Female","20-21","Neutral","Medium (Deadlines in the next week)","Sad","Warm","Yes"
-"2026/02/13 7:53:55 PM EST","Pheobe ","No","Grad Student","Female","24 +","Low Energy","High (Deadlines in the next 3 days)","Stressed","Rain","Yes"
-"2026/02/13 7:54:26 PM EST","Maisie ","No","Junior","Female","20-21","Low Energy","Low (No deadlines in the next week)","Neutral","Cold","Yes"
-"2026/02/13 7:55:05 PM EST","laura gonzalez","No","Senior","Female","22-23","Neutral","Medium (Deadlines in the next week)","Neutral","Clear Skies","Yes"
-"2026/02/13 7:57:12 PM EST","isa mcrian","No","Sophomore","Female","20-21","Energized","High (Deadlines in the next 3 days)","Happy","Rain","Yes"
-"2026/02/13 7:57:50 PM EST","hannah fern","No","Sophomore","Female","20-21","Exhausted","High (Deadlines in the next 3 days)","Stressed","Clear Skies","Yes"
-"2026/02/13 7:58:25 PM EST","Pepe Quintona","No","Senior","Male","22-23","Neutral","High (Deadlines in the next 3 days)","Neutral","Warm","Yes"
-"2026/02/13 7:59:11 PM EST","Jenny Fitz","No","5th Year Senior +","Female","22-23","Energized","High (Deadlines in the next 3 days)","Stressed","Clear Skies","Yes"
-"2026/02/13 7:59:43 PM EST","Lindsey","No","Junior","Female","20-21","Neutral","High (Deadlines in the next 3 days)","Stressed","Warm","Yes"
-"2026/02/13 8:00:13 PM EST","nish","Yes","Grad Student","Male","24 +","Neutral","Low (No deadlines in the next week)","Neutral","Rain","Yes"
-"2026/02/13 8:00:51 PM EST","Lily","No","Junior","Female","20-21","Low Energy","Medium (Deadlines in the next week)","Neutral","Warm","No"
+Timestamp,Name,Are you going out tonight?,Current Year at UF,Gender,Age Range,Energy Level Before Going Out (Throughout the Day),Responsibility Level Before Going Out (Throughout the Day),Mood Level Before Going Out (Throughout the Day),Forecasted Weather,Would a website that helps you decide whether or not to go out be helpful for you?
+1/24/2026 20:35:53,Sydney,Yes,Junior,Female,20-21,Neutral,Medium (Deadlines in the next week),Stressed,Cold,Yes
+1/24/2026 20:36:49,Kassandra,Yes,Junior,Female,20-21,Neutral,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/24/2026 20:37:46,Stella,Yes,Senior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+1/28/2026 15:27:45,Victoria Rios Narvaez,No,Senior,Female,22-23,Energized,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/28/2026 15:32:32,Rebecca Reich,Yes,Senior,Female,22-23,Neutral,Medium (Deadlines in the next week),Neutral,Warm,Yes
+1/28/2026 15:34:54,Olivia Luque,No,Senior,Female,20-21,Neutral,Medium (Deadlines in the next week),Neutral,Cold,Yes
+1/28/2026 15:36:58,Camila Cruz,No,Senior,Female,22-23,Neutral,Medium (Deadlines in the next week),Relaxed,Cold,No
+1/28/2026 15:37:34,sana sopariwala,No,Senior,Female,20-21,Neutral,Medium (Deadlines in the next week),Stressed,Cold,Yes
+1/28/2026 15:40:59,Carlos Guerra,No,Senior,Male,20-21,Energized,Medium (Deadlines in the next week),Neutral,Cold,No
+1/28/2026 15:53:17,sam,No,Senior,Female,20-21,Energized,Low (No deadlines in the next week),Happy,Warm,Yes
+1/28/2026 16:03:13,MJ Sarmiento,Yes,5th Year Senior +,Female,22-23,Neutral,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/28/2026 16:25:09,Matthew White,No,Senior,Male,20-21,Low Energy,High (Deadlines in the next 3 days),Relaxed,Clear Skies,Yes
+1/28/2026 16:33:11,Caitlyn Daniels,No,Grad Student,Female,22-23,Low Energy,Low (No deadlines in the next week),Neutral,Cold,Yes
+1/28/2026 16:41:33,MJ,No,5th Year Senior +,Female,22-23,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+1/28/2026 16:50:37,Toni Caselles,No,Grad Student,Male,24 +,Neutral,Medium (Deadlines in the next week),Neutral,Cold,No
+1/28/2026 16:57:10,Jessica Garcete,No,Senior,Female,22-23,Low Energy,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+1/28/2026 17:59:48,luna espinoza ,No,Senior,Female,20-21,Neutral,Low (No deadlines in the next week),Neutral,Cold,Yes
+1/28/2026 19:25:45,Renata Hanley,No,Senior,Female,20-21,Energized,High (Deadlines in the next 3 days),Neutral,Clear Skies,Yes
+1/28/2026 22:57:24,Clarisa,No,Senior,Female,20-21,Energized,Low (No deadlines in the next week),Neutral,Cold,Yes
+1/28/2026 23:23:56,Aubrey Fortmayer,Yes,Senior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+1/28/2026 23:26:05,Sarah,Yes,Senior,Female,22-23,Exhausted,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+1/28/2026 23:26:44,matt,Yes,Senior,Male,22-23,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+1/28/2026 23:28:50,Emily Salmonsen,No,Senior,Female,22-23,Extremely Energized,Medium (Deadlines in the next week),Happy,Warm,Yes
+1/28/2026 23:29:54,Isabel Cannella,No,Senior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+1/29/2026 23:29:54,Devin Mohr,Yes,Grad Student,Male,22-23,Extremely Energized,High (Deadlines in the next 3 days),Happy,Clear Skies,Yes
+1/28/2026 23:39:26,josiah ,Yes,Senior,Male,20-21,Neutral,Medium (Deadlines in the next week),Relaxed,Cold,Yes
+1/28/2026 23:46:48,david silva,Yes,Junior,Male,20-21,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,No
+1/28/2026 23:47:21,savannah ,Yes,Senior,Female,20-21,Low Energy,Low (No deadlines in the next week),Relaxed,Cold,No
+1/28/2026 23:47:59,eva ,Yes,Junior,Female,20-21,Energized,Medium (Deadlines in the next week),Relaxed,Cold,No
+1/28/2026 23:51:41,lawton vargo,Yes,Junior,Male,20-21,Energized,Medium (Deadlines in the next week),Neutral,Cold,Yes
+1/28/2026 23:52:26,,Yes,Junior,Female,20-21,Neutral,Medium (Deadlines in the next week),Happy,Warm,Yes
+1/28/2026 23:53:15,Lebron,No,5th Year Senior +,Prefer Not to Say,24 +,Extremely Energized,High (Deadlines in the next 3 days),Stressed,Rain,No
+1/28/2026 23:55:56,dwayne,Yes,Senior,Male,22-23,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+1/28/2026 23:56:42,jack,Yes,Sophomore,Male,22-23,Neutral,Low (No deadlines in the next week),Happy,Cold,Yes
+1/29/2026 0:04:49,nicolas galofre,Yes,Grad Student,Non-binary,22-23,Energized,Medium (Deadlines in the next week),Relaxed,Cold,Yes
+1/29/2026 0:06:48,delia ,Yes,Senior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Happy,Warm,Yes
+1/29/2026 0:13:23,reed hawke,Yes,Senior,Male,22-23,Neutral,Medium (Deadlines in the next week),Happy,Cold,No
+1/29/2026 0:14:17,jashton hunter,Yes,Senior,Male,20-21,Exhausted,Low (No deadlines in the next week),Neutral,Cold,Yes
+1/29/2026 0:15:30,jackson king,Yes,Sophomore,Male,20-21,Low Energy,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+1/29/2026 0:16:07,Chad Powers,Yes,Senior,Male,22-23,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,No
+1/29/2026 0:21:07,isaac zerdoun,Yes,Senior,Male,22-23,Neutral,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+1/29/2026 0:21:32,jared,Yes,Junior,Male,20-21,Exhausted,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+1/29/2026 0:23:58,kalista netzley,Yes,Junior,Female,20-21,Low Energy,High (Deadlines in the next 3 days),Neutral,Cold,
+1/29/2026 0:24:48,colin petruzzelli,Yes,Junior,Male,20-21,Energized,Low (No deadlines in the next week),Relaxed,Cold,Yes
+1/29/2026 0:27:15,j money ,Yes,5th Year Senior +,Non-binary,24 +,Extremely Energized,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/29/2026 0:36:58,javier,Yes,Senior,Male,20-21,Energized,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/29/2026 0:38:52,albert,Yes,Senior,Male,20-21,Energized,High (Deadlines in the next 3 days),Neutral,Warm,No
+1/29/2026 0:42:48,Juli  Quintero,Yes,Freshman,Female,,Exhausted,Low (No deadlines in the next week),Happy,Cold,Yes
+1/29/2026 0:43:21,samir,Yes,Freshman,Male,18-19,Energized,Medium (Deadlines in the next week),Happy,Cold,Yes
+1/29/2026 0:45:58,Fer,Yes,Junior,Female,20-21,Energized,High (Deadlines in the next 3 days),Stressed,Rain,Yes
+1/29/2026 0:49:28,joaquin breslin,Yes,Senior,Male,22-23,Energized,Medium (Deadlines in the next week),Happy,Clear Skies,No
+1/29/2026 1:17:06,eugenio,Yes,Senior,Male,20-21,Energized,Low (No deadlines in the next week),Happy,Warm,No
+1/29/2026 2:03:09,Sergio Caño Amor,Yes,Grad Student,Male,24 +,Neutral,Low (No deadlines in the next week),Happy,Rain,Yes
+1/29/2026 9:35:13,Katherine Bouck,No,Senior,Female,22-23,Neutral,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+1/29/2026 12:14:26,Jillian Kessler,No,Grad Student,Female,20-21,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+2/6/2026 23:03:52,Catalina Mendez,Yes,Senior,Female,22-23,Exhausted,High (Deadlines in the next 3 days),Happy,Cold,Yes
+2/6/2026 23:04:50,Florencia ,Yes,Senior,Female,20-21,Low Energy,High (Deadlines in the next 3 days),Happy,Cold,Yes
+2/6/2026 23:49:55,Marina Chen,Yes,Senior,Female,20-21,Extremely Energized,High (Deadlines in the next 3 days),Happy,Clear Skies,Yes
+2/6/2026 23:59:55,connoe,Yes,Senior,Male,22-23,Energized,Low (No deadlines in the next week),Relaxed,Cold,Yes
+2/7/2026 0:08:27,carlos ,Yes,Senior,Non-binary,24 +,Extremely Energized,High (Deadlines in the next 3 days),Happy,Warm,Yes
+2/7/2026 0:10:50,joe,Yes,Senior,Male,22-23,Extremely Energized,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+2/7/2026 0:12:54,adrian rayas ,Yes,Senior,Male,22-23,Neutral,Medium (Deadlines in the next week),Happy,Cold,Yes
+2/7/2026 0:19:59,alex,Yes,Junior,Male,20-21,Low Energy,Low (No deadlines in the next week),Relaxed,Cold,No
+2/7/2026 0:20:54,hemal dubbolla,Yes,Junior,Male,20-21,Neutral,Medium (Deadlines in the next week),Happy,Cold,No
+2/7/2026 0:25:20,Ariana,Yes,Junior,Female,20-21,Neutral,Medium (Deadlines in the next week),Neutral,Cold,Yes
+2/7/2026 0:26:02,maddie ,Yes,Junior,Female,20-21,Low Energy,Medium (Deadlines in the next week),Neutral,Cold,Yes
+2/7/2026 0:26:38,,Yes,Junior,Female,20-21,Neutral,Low (No deadlines in the next week),Neutral,Cold,Yes
+2/7/2026 0:27:39,Bernie,Yes,Junior,Male,20-21,Exhausted,Low (No deadlines in the next week),Neutral,Cold,No
+2/7/2026 0:29:49,Alessandro Giusti,Yes,5th Year Senior +,Male,22-23,Extremely Energized,Low (No deadlines in the next week),Neutral,Clear Skies,Yes
+2/7/2026 0:31:11,Lean Drox ,Yes,Grad Student,Male,22-23,Energized,High (Deadlines in the next 3 days),Happy,Cold,Yes
+2/7/2026 0:37:04,Nico Pateras,Yes,Junior,Male,22-23,Energized,Medium (Deadlines in the next week),Relaxed,Cold,Yes
+2/7/2026 0:38:23,andrew collhan ,Yes,Senior,Non-binary,20-21,Low Energy,Low (No deadlines in the next week),Stressed,Cold,Yes
+2/7/2026 0:39:46,jonathan ,Yes,Senior,Male,20-21,Neutral,Medium (Deadlines in the next week),Happy,Clear Skies,No
+2/7/2026 0:40:57,Filippo Grassi,No,5th Year Senior +,Male,22-23,Exhausted,Low (No deadlines in the next week),Sad,Cold,Yes
+2/7/2026 0:42:32,mari,Yes,Freshman,Male,18-19,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,No
+2/7/2026 0:43:36,KJ,Yes,Freshman,Male,18-19,Neutral,Medium (Deadlines in the next week),Sad,Cold,Yes
+2/7/2026 0:45:13,zak,Yes,Senior,Male,22-23,Energized,Medium (Deadlines in the next week),Neutral,Warm,Yes
+2/7/2026 0:46:43,Bernando Carlos ,Yes,Senior,Male,22-23,Energized,Low (No deadlines in the next week),Relaxed,Warm,Yes
+2/7/2026 0:59:26,charlize ,Yes,Junior,Female,20-21,Neutral,Low (No deadlines in the next week),Neutral,Cold,Yes
+2/7/2026 1:00:09,salo,Yes,Senior,Female,20-21,Energized,Low (No deadlines in the next week),Relaxed,Clear Skies,Yes
+2/7/2026 1:01:05,mazilyn tinnell,Yes,Senior,Female,22-23,Neutral,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/7/2026 1:01:39,lizzie ,Yes,Junior,Female,20-21,Energized,Medium (Deadlines in the next week),Neutral,Cold,Yes
+2/7/2026 1:03:19,merritt weinberg,Yes,Junior,Male,20-21,Low Energy,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+2/7/2026 1:10:27,jerry,Yes,Senior,Male,20-21,Exhausted,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+2/7/2026 1:11:28,gabe B,Yes,Senior,Male,22-23,Energized,High (Deadlines in the next 3 days),Neutral,Cold,Yes
+2/7/2026 1:44:21,,Yes,Senior,Female,20-21,Energized,High (Deadlines in the next 3 days),Relaxed,Clear Skies,No
+2/7/2026 1:45:06,bernardo,Yes,Sophomore,Male,18-19,Neutral,Low (No deadlines in the next week),Stressed,Cold,No
+2/7/2026 1:45:35,sam schmidtje ,Yes,Freshman,Male,20-21,Neutral,High (Deadlines in the next 3 days),Happy,Clear Skies,Yes
+2/9/2026 11:40:12,Jonas,No,Grad Student,Male,24 +,Low Energy,Medium (Deadlines in the next week),Neutral,Cold,No
+2/13/2026 19:48:10,Nancy ,No,Sophomore,Female,18-19,Low Energy,Medium (Deadlines in the next week),Neutral,Warm,Yes
+2/13/2026 19:48:35,Hailey,No,Freshman,Female,18-19,Exhausted,High (Deadlines in the next 3 days),Stressed,Warm,Yes
+2/13/2026 19:49:06,Jade,No,Senior,Female,20-21,Neutral,Medium (Deadlines in the next week),Sad,Warm,Yes
+2/13/2026 19:53:55,Pheobe ,No,Grad Student,Female,24 +,Low Energy,High (Deadlines in the next 3 days),Stressed,Rain,Yes
+2/13/2026 19:54:26,Maisie ,No,Junior,Female,20-21,Low Energy,Low (No deadlines in the next week),Neutral,Cold,Yes
+2/13/2026 19:55:06,laura gonzalez,No,Senior,Female,22-23,Neutral,Medium (Deadlines in the next week),Neutral,Clear Skies,Yes
+2/13/2026 19:57:13,isa mcrian,No,Sophomore,Female,20-21,Energized,High (Deadlines in the next 3 days),Happy,Rain,Yes
+2/13/2026 19:57:50,hannah fern,No,Sophomore,Female,20-21,Exhausted,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+2/13/2026 19:58:26,Pepe Quintona,No,Senior,Male,22-23,Neutral,High (Deadlines in the next 3 days),Neutral,Warm,Yes
+2/13/2026 19:59:12,Jenny Fitz,No,5th Year Senior +,Female,22-23,Energized,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+2/13/2026 19:59:44,Lindsey,No,Junior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Stressed,Warm,Yes
+2/13/2026 20:00:14,nish,Yes,Grad Student,Male,24 +,Neutral,Low (No deadlines in the next week),Neutral,Rain,Yes
+2/13/2026 20:00:52,Lily,No,Junior,Female,20-21,Low Energy,Medium (Deadlines in the next week),Neutral,Warm,No
+2/23/2026 15:59:03,Grace Lehmann,No,Senior,Female,22-23,Neutral,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/23/2026 15:59:10,Sabrina Cronin,No,Senior,Female,22-23,Neutral,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/23/2026 16:00:37,Isabella Vina,No,Freshman,Female,18-19,Neutral,High (Deadlines in the next 3 days),Stressed,Clear Skies,Yes
+2/23/2026 16:01:43,Sophia Genao,No,Freshman,Female,18-19,Neutral,Medium (Deadlines in the next week),Happy,Clear Skies,Yes
+2/23/2026 16:03:53,Emily Queral,No,Sophomore,Female,20-21,Energized,High (Deadlines in the next 3 days),Relaxed,Cold,Yes
+2/23/2026 16:05:54,Juliana Prada,No,Sophomore,Female,18-19,Low Energy,Medium (Deadlines in the next week),Neutral,Warm,Yes
+2/23/2026 16:11:16,Lily Taylor,No,Junior,Female,20-21,Neutral,Medium (Deadlines in the next week),Relaxed,Cold,Yes
+2/23/2026 16:22:32,Maider,No,Sophomore,Female,18-19,Neutral,Medium (Deadlines in the next week),Neutral,Cold,Yes
+2/23/2026 16:35:00,Remi ,No,Senior,Female,20-21,Neutral,Medium (Deadlines in the next week),Neutral,Warm,Yes
+2/23/2026 16:54:31,Brandon Aks,No,Freshman,Male,18-19,Energized,High (Deadlines in the next 3 days),Stressed,Clear Skies,No
+2/23/2026 17:07:58,Julia Salerno,No,Senior,Female,20-21,Low Energy,Medium (Deadlines in the next week),Happy,Clear Skies,Yes
+2/23/2026 17:08:15,Katie Shealy,No,Senior,Female,20-21,Neutral,High (Deadlines in the next 3 days),Stressed,Warm,Yes
+2/23/2026 17:39:40,temp,No,5th Year Senior +,Female,22-23,Energized,Low (No deadlines in the next week),Relaxed,Warm,No
+2/23/2026 18:02:50,Katelyn Medina,No,Junior,Female,20-21,Energized,Low (No deadlines in the next week),Relaxed,Clear Skies,No
+2/23/2026 18:26:35,Adriana torres ,Yes,Senior,Female,22-23,Exhausted,Medium (Deadlines in the next week),Stressed,Cold,Yes
+2/23/2026 18:45:45,,No,Senior,Female,20-21,Neutral,Low (No deadlines in the next week),Happy,Warm,No
+2/23/2026 20:07:39,frances baltodano,No,Sophomore,Female,20-21,Energized,Medium (Deadlines in the next week),Stressed,Warm,Yes
+2/23/2026 20:12:28,Kira,No,Freshman,Female,18-19,Energized,Medium (Deadlines in the next week),Happy,Warm,No
+2/23/2026 21:14:07,Ayushi,No,Sophomore,Female,18-19,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/23/2026 21:54:25,Masha Belyaeva,No,Freshman,Female,18-19,Neutral,High (Deadlines in the next 3 days),Neutral,Cold,No
+2/24/2026 13:51:51,Sharianne Sampson,No,Sophomore,Female,20-21,Energized,Medium (Deadlines in the next week),Happy,Cold,Yes
+2/24/2026 17:57:48,Devon,No,Junior,Female,24 +,Neutral,Medium (Deadlines in the next week),Relaxed,Cold,No
+2/25/2026 15:18:18,Catherine Brooks,No,Sophomore,Female,20-21,Energized,Medium (Deadlines in the next week),Happy,Clear Skies,Yes
+2/25/2026 16:42:33,Gemma Berr,Yes,Sophomore,Female,20-21,Energized,Low (No deadlines in the next week),Relaxed,Cold,Yes
+2/25/2026 16:43:04,Cathy Ferd,No,Freshman,Female,18-19,Exhausted,Medium (Deadlines in the next week),Neutral,Cold,No
+2/25/2026 16:43:55,Olivia WIlliams,No,Senior,Female,22-23,Low Energy,Medium (Deadlines in the next week),Neutral,Cold,No
+2/25/2026 16:44:22,Ines Figuroa,No,Grad Student,Female,24 +,Neutral,High (Deadlines in the next 3 days),Stressed,Warm,No
+2/25/2026 16:44:54,Pablo Quintana,No,Grad Student,Male,24 +,Energized,Medium (Deadlines in the next week),Stressed,Warm,No
+2/25/2026 16:45:22,Reggie Montana,No,Sophomore,Male,20-21,Neutral,High (Deadlines in the next 3 days),Stressed,Warm,No
+2/25/2026 16:46:17,Sofia Gonzalez,Yes,Senior,Female,20-21,Energized,Low (No deadlines in the next week),Happy,Cold,Yes
+2/25/2026 16:50:52,Sergio,No,Sophomore,Male,20-21,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/25/2026 16:51:19,Antonio,No,5th Year Senior +,Male,24 +,Low Energy,High (Deadlines in the next 3 days),Stressed,Cold,No
+2/25/2026 16:52:36,Adriana,Yes,Senior,Female,22-23,Extremely Energized,High (Deadlines in the next 3 days),Happy,Cold,Yes
+2/25/2026 16:53:28,Elena Morales,Yes,Senior,Female,22-23,Energized,Low (No deadlines in the next week),Happy,Warm,Yes
+2/25/2026 16:53:47,Marcus Bennett,Yes,Junior,Male,20-21,Energized,Low (No deadlines in the next week),Relaxed,Warm,No
+2/25/2026 16:54:05,Sofia Alvarez,No,Freshman,Female,18-19,Exhausted,High (Deadlines in the next 3 days),Stressed,Rain,No
+2/25/2026 16:54:39,Daniel Whitaker,Yes,Sophomore,Male,20-21,Neutral,Medium (Deadlines in the next week),Relaxed,Cold,Yes
+2/25/2026 16:55:05,Camille Laurent,Yes,Senior,Female,22-23,Extremely Energized,High (Deadlines in the next 3 days),Happy,Cold,Yes
+2/25/2026 16:55:28,Javier Castillo,Yes,Sophomore,Male,18-19,Energized,Low (No deadlines in the next week),Relaxed,Cold,No
+2/25/2026 16:56:07,Naomi Brooks,No,Sophomore,Female,18-19,Exhausted,Low (No deadlines in the next week),Neutral,Cold,No
+2/25/2026 16:56:37,Ethan Gallagher,Yes,Senior,Male,22-23,Extremely Energized,Medium (Deadlines in the next week),Relaxed,Cold,No
+2/25/2026 16:57:00,Priya Raman,Yes,Junior,Female,20-21,Energized,Low (No deadlines in the next week),Happy,Cold,Yes
+2/25/2026 16:57:26,Lucas Romero,Yes,Sophomore,Male,18-19,Energized,Medium (Deadlines in the next week),Neutral,Cold,Yes
+2/25/2026 16:57:53,Isabella Costa,Yes,Sophomore,Female,20-21,Energized,Low (No deadlines in the next week),Happy,Warm,Yes
+2/25/2026 16:58:50,Valentina Ruiz,No,Senior,Female,22-23,Low Energy,High (Deadlines in the next 3 days),Sad,Cold,No
+2/25/2026 16:59:14,Caleb Foster,No,Freshman,Male,18-19,Low Energy,High (Deadlines in the next 3 days),Stressed,Rain,No
+2/25/2026 17:00:18,Chloe Harrison,Yes,Senior,Female,22-23,Energized,Low (No deadlines in the next week),Happy,Warm,Yes
+2/25/2026 17:25:25,Amelia Grant,No,Sophomore,Female,20-21,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/25/2026 17:29:00,Victor Salazar,No,Senior,Male,22-23,Exhausted,High (Deadlines in the next 3 days),Stressed,Cold,Yes
+2/25/2026 17:29:29,Riley Morgan,Yes,Senior,Female,22-23,Energized,Low (No deadlines in the next week),Happy,Cold,No
