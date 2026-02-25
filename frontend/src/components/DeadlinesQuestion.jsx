@@ -9,40 +9,28 @@ import { useState } from "react";
 
 //Energy question function
 export default function EnergyQuestion() {
-    //selectedEnergy = "", initalizing state
-    const [selectedEnergy, setSelectedEnergy] = useState("");
-    //Energy Options
-    //JS array of objects (energys)
-    const energyOptions = [
+    //selectedDeadline = "", initalizing state
+    const [selectedDeadline, setSelectedDeadline] = useState("");
+    //Deadline Options
+    //JS array of objects (deadliness)
+    const deadlineOptions = [
       {
-        label: "Exhausted",
+        label: "Low      - (No deadlines in the next week)",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "exhausted",
+        value: "low"
       },
       {
-        label: "Low Energy",
+        label: "Medium - (Deadlines in the next week)",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "lowEnergy",
+        value: "medium"
       },
       {
-        label: "Neutral",
+        label: "High     - (Deadlines in the next 3 days)",
         unclicked: purpleUnclickedHeart,
         clicked: purpleClickedHeart,
-        value: "neutral",
-      },
-      {
-        label: "Energized",
-        unclicked: pinkUnclickedHeart,
-        clicked: pinkClickedHeart,
-        value: "energized",
-      },
-      {
-        label: "Extremely Energized",
-        unclicked: blueUnclickedHeart,
-        clicked: blueClickedHeart,
-        value: "extremelyEnergized",
+        value: "high"
       },
     ];
   
@@ -50,9 +38,9 @@ export default function EnergyQuestion() {
         //Buttons parent div container
         <div className="flex flex-col w-full items-start ml-[clamp(16px,4vw,60px)]">
           
-          {/*For every object inside energyOptions array this creates a button*/}
-          {energyOptions.map((option) => {
-            const isSelected = selectedEnergy === option.value;
+          {/*For every object inside deadlineOptions array this creates a button*/}
+          {deadlineOptions.map((option) => {
+            const isSelected = selectedDeadline === option.value;
             
             //Heart image that is displayed
             let heartImage;
@@ -66,10 +54,10 @@ export default function EnergyQuestion() {
               <button
                 key={option.value}
                 type="button"
-                //When clicked, it updates the state and logs which energy was selected
+                //When clicked, it updates the state and logs which deadline was selected
                 onClick={() => {
-                  setSelectedEnergy(option.value);
-                  console.log("Selected energy:", option.value);
+                  setSelectedDeadline(option.value);
+                  console.log("Selected deadline:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"
               >

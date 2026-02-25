@@ -2,7 +2,9 @@ import Title1 from "../assets/AfterDarkText.png";
 import Title2 from "../assets/AnalyticsText.png";
 import IntroSection from "../assets/IntroSection.png";
 import Question1 from "../assets/1stQuestion.png";
+import Question2 from "../assets/2ndQuestion.png";
 import EnergyQuestion from "../components/EnergyQuestion";
+import DeadlinesQuestion from "../components/DeadlinesQuestion";
 
 
 export default function Home() {
@@ -35,13 +37,13 @@ export default function Home() {
 
         {/*Section 3: User Input Questions*/}
 
-        {/*Question Background div*/}
-        <div className="relative flex justify-center mb-100">
+        {/*Question 1 Background div*/}
+        <div className="relative flex justify-center">
 
             <img 
                 src={Question1}
                 alt=""
-                className="h-[clamp(200px,42vw,550px)]"
+                className="h-[clamp(200px,42vw,550px)] mb-10"
             />
 
             {/*Div container for button divs to be on top of the question 1 background image*/}
@@ -50,6 +52,24 @@ export default function Home() {
                 Before *potentially* going out tonight,  <br /> what’s your vibe?
                 </h1>
                 <EnergyQuestion />
+            </div>
+        </div>
+
+        {/*Question 2 Background div*/}
+        <div className="relative flex justify-center">
+
+            <img 
+                src={Question2}
+                alt=""
+                className="h-[clamp(100px,30vw,400px)] mb-10"
+            />
+
+            {/*Div container for button divs to be on top of the question 2 background image*/}
+            <div className="absolute inset-0">
+                <h1 className="ml-[clamp(16px,4vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
+                How many deadlines are looming?
+                </h1>
+                <DeadlinesQuestion />
             </div>
         </div>
 
