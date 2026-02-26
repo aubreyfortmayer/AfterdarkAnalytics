@@ -66,7 +66,7 @@ export default function Home() {
 
             {/*Div container for button divs to be on top of the question 2 background image*/}
             <div className="absolute inset-0">
-                <h1 className="ml-[clamp(16px,4vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
+                <h1 className="ml-[clamp(16px,4vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy'] mb-2">
                 How many deadlines are looming?
                 </h1>
                 <DeadlinesQuestion />
