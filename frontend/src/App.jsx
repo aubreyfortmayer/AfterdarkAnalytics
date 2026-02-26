@@ -11,15 +11,13 @@ export default function App() {
       <div className="min-h-screen flex flex-col bg-[#fcddec]">
         {/*Header shown on every page!*/}
         <Header/>
-
-        <div className = "flex-1">
+        <main className="flex-1">
           <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/results" element={<Results />} />
-        </Routes>
-        </div>
-  
-        <Footer />
+            <Route path="/" element={<Home />} />
+            <Route path="/results" element={<Results />} />
+          </Routes>
+        </main>
+        <Footer/>
       </div>
     </BrowserRouter>
   );
