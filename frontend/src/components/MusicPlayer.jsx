@@ -32,7 +32,8 @@ return (
         src = {MusicButton}
         alt="set the mood"
         // onClick = {playMusic}
-        className = "w-[180px] h-auto"
+        //h-auto, adjusts height based on conttent of page
+        className = "w-[240px] h-auto"
         />
         {/* <audio ref = {audio} src = {goingOutSong} /> */}
     </div>
