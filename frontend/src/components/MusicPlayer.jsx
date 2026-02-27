@@ -7,31 +7,31 @@ export default function MusicPlayer() {
 //     //lets us control playing, pausing, etc.
 
 
-//     //creates state inside component, this state is whether the music is playing
-//     const [playing, startPlaying] = useState(false);
+    //creates state inside component, this state is whether the music is playing
+    const [playing, startPlaying] = useState(false);
 
-//     const playMusic = () => {
-//         if (!audio.current)
-//             return;
+    const playMusic = () => {
+        if (!audio.current)
+            return;
 
-//         if (playing) {
-//             audio.current.pause();
-//         }
+        if (playing) {
+            audio.current.pause();
+        }
 
-//         else {
-//             audio.current.play();
-//         }
+        else {
+            audio.current.play();
+        }
 
 
-//     startPlaying( prev => !prev);
-// };
+    startPlaying( prev => !prev);
+};
 
 return (
     <div className="flex justify-center">
         <img
         src = {MusicButton}
         alt="set the mood"
-        // onClick = {playMusic}
+        onClick = {playMusic}
         //h-auto, adjusts height based on conttent of page
         className = "w-[240px] h-auto"
         />
