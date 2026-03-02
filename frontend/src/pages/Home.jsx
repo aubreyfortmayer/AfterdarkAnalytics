@@ -2,7 +2,16 @@ import Title1 from "../assets/AfterDarkText.png";
 import Title2 from "../assets/AnalyticsText.png";
 import IntroSection from "../assets/IntroSection.png";
 import Question1 from "../assets/1stQuestion.png";
+import Question2 from "../assets/2ndQuestion.png";
 import EnergyQuestion from "../components/EnergyQuestion";
+import DeadlinesQuestion from "../components/DeadlinesQuestion";
+import MoodQuestion from "../components/MoodQuestion";
+import Question3 from "../assets/3rdQuestion.png";
+import revealButton from "../assets/revealButton.png";
+import heartLocket from "../assets/heartLocket.png";
+import stickersGroupCam from "../assets/stickersGroupCam.png";
+
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -35,25 +44,85 @@ export default function Home() {
 
         {/*Section 3: User Input Questions*/}
 
-        {/*Question Background div*/}
-        <div className="relative flex justify-center mb-100">
+        {/*Question 1 Background div*/}
+        <div className="relative flex justify-center">
 
             <img 
                 src={Question1}
                 alt=""
-                className="h-[clamp(200px,42vw,550px)]"
+                className="h-[clamp(200px,42vw,550px)] mb-10"
             />
 
             {/*Div container for button divs to be on top of the question 1 background image*/}
             <div className="absolute inset-0">
-                <h1 className="ml-[clamp(16px,4vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
+                <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
                 Before *potentially* going out tonight,  <br /> what’s your vibe?
                 </h1>
                 <EnergyQuestion />
             </div>
         </div>
 
-        
+        {/*Question 2 Background div*/}
+        <div className="relative flex justify-center">
+
+            <img 
+                src={Question2}
+                alt=""
+                className="h-[clamp(100px,30vw,400px)] mb-10"
+            />
+
+            {/*Div container for button divs to be on top of the question 2 background image*/}
+            <div className="absolute inset-0">
+                <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy'] mb-2">
+                How many deadlines are looming?
+                </h1>
+                <DeadlinesQuestion />
+            </div>
         </div>
+
+        {/*Question 3 Background div*/}
+        <div className="relative flex justify-center">
+
+            <img 
+                src={Question3}
+                alt=""
+                className="h-[clamp(200px,42vw,550px)] mb-3"
+            />
+
+            {/*Div container for button divs to be on top of the question 3 background image*/}
+            <div className="absolute inset-0">
+                <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4.5vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
+                What mood are you bringing into<br /> the night?
+                </h1>
+                <MoodQuestion />
+            </div>
+        </div>
+
+        {/*Section 4: Reveal Button Area*/}
+        <div className="relative flex w-full items-center justify-between">
+            <img 
+                src={heartLocket}
+                alt=""
+                className="ml-[clamp(5px,2vw,30px)] mt-[clamp(40px,8vw,100px)] h-[clamp(150px,35vw,500px)]"
+            />
+
+            <div className="absolute inset-0 flex justify-center">
+                <Link to="/results">
+                    <img 
+                        src={revealButton}
+                        alt=""
+                        className="h-[clamp(100px,24vw,400px)]"
+                    />
+                </Link>
+            </div>
+
+                <img 
+                    src={stickersGroupCam}
+                    alt=""
+                    className="mt-[clamp(5px,2vw,30px)] h-[clamp(200px,45vw,750px)] mr-[clamp(5px,2vw,30px)]"
+                />    
+        </div>
+        </div>
+        
     );
 }
