@@ -5,12 +5,13 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from imblearn.over_sampling import SMOTE
-import sklearn
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_validate
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import roc_curve, roc_auc_score
+from xgboost import XGBClassifier
+
 
 
 readindf = pd.read_csv("survey.csv")
@@ -97,39 +98,6 @@ df_ohe["mood_x_responsibility"] = df_ohe["mood_ord"] * df_ohe["responsibility_or
 X = df_ohe.drop(["Target"], axis=1)
 y = df_ohe["Target"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state=42, stratify=y)
-
-
-
-rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
-rf_classifier.fit(X_train, y_train)
-y_probs = rf_classifier.predict_proba(X_test)[:, 1]
-
-for prob in y_probs[:10]:
-    print(round(prob, 2))
-
-fpr, tpr, thresholds = roc_curve(y_test, y_probs)
-auc = roc_auc_score(y_test, y_probs)
-print("ROC-AUC:", auc)
-
-plt.figure()
-plt.plot(fpr, tpr, label=f'ROC Curve, AUC = {auc}')
-plt.plot([0,1], [0,1])
-plt.xlabel("False Positive Rate")
-plt.ylabel("True Positive Rate")
-plt.legend();
-plt.show();
-
-y_pred = rf_classifier.predict(X_test);
-
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy * 100:.1f}%")
-cm = confusion_matrix(y_test, y_pred);
-plt.figure(figsize=(5,4))
-sns.heatmap(cm, annot=True, fmt='g', cmap="RdPu")
-plt.title("Confusion Matrix for Random Forest")
-plt.ylabel("Actual Label")
-plt.xlabel("Predicted Label")
-plt.show()
 
 
 
