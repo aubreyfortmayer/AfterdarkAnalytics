@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.metrics import roc_curve, roc_auc_score
 from xgboost import XGBClassifier
+from sklearn.linear_model import LogisticRegression
 
 
 
@@ -32,7 +33,8 @@ target_col = readindf["Target"]
 print(target_col)
 
 counts = readindf["Target"].value_counts()
-plt.pie(counts, labels = counts.index, autopct='%1.1f%%')
+color_pie = ["#FFD1DC", "#FF69B4"]
+plt.pie(counts, labels = counts.index, autopct='%1.1f%%', colors=color_pie)
 plt.title("Target Class Distribution")
 plt.show()
 # weather is onehot
