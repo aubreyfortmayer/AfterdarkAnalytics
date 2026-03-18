@@ -1,6 +1,6 @@
 import HeaderBackground from "../assets/HeaderBackground.png";
 import AboutImage from "../assets/ABOUT.png";
-import SignInImage from "../assets/SIGNIN.png";
+import StartImage from "../assets/START.png";
 import Logo from "../assets/StarLogo.png";
 import { Link } from "react-router-dom";
 
@@ -27,8 +27,8 @@ export default function Header() {
                     <img src={AboutImage} alt="About" className="h-[clamp(24px,5vw,48px)] cursor-pointer" />
                 </Link>
 
-                <Link to="/signin">
-                    <img src={SignInImage} alt="Sign In" className="h-[clamp(24px,5vw,48px)] cursor-pointer" />
+                <Link to="/#questions">
+                    <img src={StartImage} alt="Start" className="h-[clamp(24px,5vw,48px)] cursor-pointer" />
                 </Link>
                 </div>
             </div>

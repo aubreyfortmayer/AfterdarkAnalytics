@@ -65,7 +65,7 @@ export default function Home() {
         {/*Section 3: User Input Questions*/}
 
         {/*Question 1 Background div*/}
-        <div className="relative flex justify-center">
+        <div id="questions" className="relative flex justify-center">
 
             <img 
                 src={Question1}
