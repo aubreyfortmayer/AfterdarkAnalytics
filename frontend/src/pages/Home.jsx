@@ -10,11 +10,31 @@ import Question3 from "../assets/3rdQuestion.png";
 import revealButton from "../assets/revealButton.png";
 import heartLocket from "../assets/heartLocket.png";
 import stickersGroupCam from "../assets/stickersGroupCam.png";
-
 import { Link } from "react-router-dom";
+import {useEffect} from "react";
+import{useLocation}from "react-router-dom";
 
 
 export default function Home() {
+
+    //gets current url info
+    const location=useLocation();
+    //runs when the route/url changes
+    useEffect(()=>{
+        //if url has a # so for our #intro
+        if(location.hash){
+            //finds the elements with the # id
+            const element=document.getElementById(location.hash.substring(1));
+            //if it exists, then it scrolls to it
+            if(element){
+                element.scrollIntoView({behavior:"smooth"});
+            }
+            }
+            else{
+                window.scrollTo({top:0,behavior:"smooth"});
+            }
+        },[location]);
+    
     return (
         //Section 1: Title, utilizing clamp to make it responsive for different screens
         <div className="flex flex-col items-center -mt-[clamp(24px,10vw,50px)]">
@@ -24,7 +44,7 @@ export default function Home() {
                 className="self-start pl-[clamp(10px,2vw,24px)] h-[clamp(200px,32vw,500px)]"
             />
         
-        <div className="flex justify-end w-full pr-6">
+        <div id="intro" className="flex justify-end w-full pr-6">
             <img 
                 src={Title2}
                 alt=""
@@ -33,7 +53,7 @@ export default function Home() {
         </div>
 
         {/*Section 2: Intro*/}
-        <div id="intro" className="flex justify-end w-full">
+        <div className="flex justify-end w-full">
             <img 
                 src={IntroSection}
                 alt=""

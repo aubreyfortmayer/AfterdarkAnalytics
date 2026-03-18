@@ -23,9 +23,9 @@ export default function Header() {
 
                 {/*Div for right-aligned navigation buttons*/}
                 <div className="flex justify-end gap-10 pr-[clamp(16px,4vw,40px)]">
-                <a href="/#intro">
+                <Link to="/#intro">
                     <img src={AboutImage} alt="About" className="h-[clamp(24px,5vw,48px)] cursor-pointer" />
-                </a>
+                </Link>
 
                 <Link to="/signin">
                     <img src={SignInImage} alt="Sign In" className="h-[clamp(24px,5vw,48px)] cursor-pointer" />

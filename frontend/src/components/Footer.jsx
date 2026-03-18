@@ -21,9 +21,15 @@ export default function Footer() {
                 </Link>
             {/*TO DO: change to link sharing feature*/}
                 {/*Share Button*/}
-                <Link to="/">
+                <button
+                onClick={()=> {navigator.clipboard.writeText(window.location.href);
+                    alert("Link copied!"); 
+                }}
+
+                className="cursor-pointer"
+                >
                     <img src={ShareButton} alt="Share" className="h-[clamp(50px,10vw,200px)] cursor-pointer" />
-                </Link>
+                </button>
             </div>
         </footer>
     );
