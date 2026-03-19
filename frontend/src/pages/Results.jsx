@@ -6,6 +6,7 @@ import SpinTheBottle from "../components/SpinTheBottle"
 import Martini from "../components/Martini"
 import MartiniStickers from "../assets/MartiniSticker.png"
 import CuteKissMark from "../assets/100CuteKiss.png"
+import ResultsShareImage from "../components/ResultsShareImage";
 import ResultsBox from "../components/ResultsBox"
 
 export default function Results() {
@@ -66,6 +67,8 @@ export default function Results() {
                 {/*music button positioned towards bottom */}
                 <MusicPlayer />
                 </div>
+        
+                
                 
                 
             {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
@@ -80,6 +83,10 @@ export default function Results() {
             className = "absolute top-[560px] left-[30%] w-[70px]"
             />
 
+          
+            <ResultsShareImage />
+     
+            
         </div>
 
     );

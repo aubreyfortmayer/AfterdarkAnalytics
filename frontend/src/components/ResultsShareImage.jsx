@@ -11,7 +11,7 @@ export default function ResultsShareImage(){
     //tracking element to turn into png image later
     const resultsShareImage = useRef(null);
     //TO DO: change to actual result value later
-    const resultPercent=86;
+    const resultPercent=16;
     const isGoOut = resultPercent > 50;
     //if isGoOut is true, do 1st option, if not then stay in & use 2nd option
     const backgroundImage = isGoOut ? goOutImage : stayInImage;
