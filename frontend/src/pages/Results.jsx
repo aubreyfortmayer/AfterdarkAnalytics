@@ -6,6 +6,7 @@ import SpinTheBottle from "../components/SpinTheBottle"
 import Martini from "../components/Martini"
 import MartiniStickers from "../assets/MartiniSticker.png"
 import CuteKissMark from "../assets/100CuteKiss.png"
+import ResultsBox from "../components/ResultsBox"
 
 export default function Results() {
     return (
@@ -15,18 +16,18 @@ export default function Results() {
         //minimum height, need extra height so 140 (min-h-[140vh])
         //w-full, full width of container used
         //max width = 900 px (max-w-[900px])
-        <div className="relative flex flex-col items-center text-center min-h-[140vh] w-full max-w-[900px] mx-auto">
+        <div className="relative w-full min-h-[1100px] bg-[#fcddec] overflow-visible">
             
             <img 
             src = {Title}
             //mt-10, moving the title down from the top of the page
-            className = "mt-10 w-[370px]"
+            className = "absolute top-8 left-1/2 -translate-x-1/2 w-[360px]"
             />
 
             <img 
                 src = {CuteKissMark}
                 alt = "100% Cute!"
-                className = "absolute w-67 rotate-[10deg] right-10 top-24"
+                className = "absolute w-[250px] rotate-[10deg] right-8 top-20"
             />
 
 
@@ -34,52 +35,51 @@ export default function Results() {
                 relative, items inside the box will position themselves based on
                 this box, NOT the page
             */}
-            <div className = "mt-20 relative w-full max-w-[700px] h-[550px]">
+            <div className = "absolute top-[180px] left-1/2 -translate-x-1/2">
                 {/*centered horizontally + moved 35 px to right*/}
-                <div className="absolute left-1/2 -translate-x-1/2 top-[0px]">
-                     <SpinTheBottle/>
-                </div>
+                          <SpinTheBottle/>
+
+                    </div>
                    
 
                 {/*absolute, placed within the relative container*/}
-                <div className = "absolute left-[-150px] top-[180px]">
+                <div className = "absolute left-20 top-[360px] scale-[1.25]">
                 
-                {/*animation, not fully implemented yet*/}
+                <img
+                src = {MartiniStickers}
+                className = " w-[195px] mb-2"
+                />
+                
+                
                  <Martini probability={100}/>
 
                 </div>
                 
-                 <img
-                src = {MartiniStickers}
-                className = "absolute left-[-120px] top-[-10px] w-[185px]"
-                />
-                
+                <div className= "absolute right-[120px] top-[380px]">
+                    <ResultsBox probability = {100}/>
+                    </div>
                
-             
-            </div>
-
-            {/* relative, want to position the stickers around wrapper using the music button's location
-            */}
+     
 
             {/*mt-auto, the music button is pushed down as far as it can be */}
-            <div className = "mt-auto mb-16 relative"> 
+            <div className = "absolute left-[38%] top-[870px] flex items-center gap-4"> 
                 {/*music button positioned towards bottom */}
                 <MusicPlayer />
+                </div>
                 
                 
             {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
             <img 
             src = {Heart}
-            className = "absolute -top-8.5 right-[-9px] w-[90px]" 
+            className = "absolute top-[470px] left-[48%] w-[80px]" 
             />
             
             {/*star sticker, -left makes the pixel value negative*/}
             <img 
             src = {Star}
-            className = "absolute bottom-[30px] -left-6 w-[80px]"
+            className = "absolute top-[560px] left-[30%] w-[70px]"
             />
 
-            </div>
         </div>
 
     );

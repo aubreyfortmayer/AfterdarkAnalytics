@@ -8,20 +8,20 @@ export default function Martini({probability = 50}) {
 
     //container, will hold everything else (relative)
     //overflow-hidden, we don't want the prob liquid to overflow out of the container
-    <div className="relative w-[250px] h-[350px] overflow-hidden">
+    <div className="relative w-[250px] h-[350px] mx-auto">
 
         <div 
             
             //liquid positioned based on the martini glass, z-20 for the liquid so it will be on top of the glass (z-10)
-            className = "absolute bottom-[220px] left-[-13px] w-[200px] overflow-hidden transition-all duration-[2789ms] z-20"
+            className = "absolute bottom-[220px] left-[32px] w-[134px] overflow-hidden transition-all duration-[2789ms] z-20"
             
             //controls the liquid animation moving based on the probability, scaling by 1.2 so liquid fits in glass
-            style = {{height: `${probability * 1.2}px`}}
+            style = {{height: `${(probability/100) * 104}px`}}
         >
         
         <img 
                 src = {ProbabilityLiquid}
-                className ="absolute bottom-0 left-5 w-full"
+                className ="absolute bottom-0 left-0 w-full"
                 />
                 </div>
 

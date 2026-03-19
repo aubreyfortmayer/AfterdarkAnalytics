@@ -1,41 +1,25 @@
-import {useRef, useState} from "react";
-// import goingOutSong from "../assets/goingOutSong.mp3";
-import MusicButton from "../assets/MusicButton.png";
+import MusicSymbolMoon from "../assets/MusicSymbolMoon.png"
 
 export default function MusicPlayer() {
-//     const audio = useRef(null);
-//     //lets us control playing, pausing, etc.
-
-
-    //creates state inside component, this state is whether the music is playing
-    const [playing, startPlaying] = useState(false);
-
-    const playMusic = () => {
-        if (!audio.current)
-            return;
-
-        if (playing) {
-            audio.current.pause();
-        }
-
-        else {
-            audio.current.play();
-        }
-
-
-    startPlaying( prev => !prev);
-};
 
 return (
-    <div className="flex justify-center">
-        <img
-        src = {MusicButton}
-        alt="set the mood"
-        onClick = {playMusic}
-        //h-auto, adjusts height based on conttent of page
-        className = "w-[240px] h-auto"
+    <div className="flex justify-center items-center gap-6 mt-8">
+        <iframe data-testid="embed-iframe" 
+        style={{borderRadius: "12px" }} 
+        src="https://open.spotify.com/embed/playlist/1A2V3xLimlfh9hTeT6pIAU?utm_source=generator" 
+        width="300" 
+        height="152"
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        allowFullScreen
+        loading="lazy"></iframe> 
+        
+
+    <img
+        src={MusicSymbolMoon}
+        className="w-[190px] h-auto"
         />
-        {/* <audio ref = {audio} src = {goingOutSong} /> */}
+        
     </div>
     );
 }
