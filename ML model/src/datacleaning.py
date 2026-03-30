@@ -15,7 +15,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 
-readindf = pd.read_csv("survey.csv")
+readindf = pd.read_csv("../survey.csv")
 names_of_og_cols = readindf.columns
 print(names_of_og_cols)
 readindf.drop(["Timestamp", "Name", "Current Year at UF", "Gender", "Age Range", "Would a website that helps you decide whether "
@@ -97,7 +97,10 @@ df_ohe.drop(["Mood Level Before Going Out (Throughout the Day)",
 df_ohe["mood_x_responsibility"] = df_ohe["mood_ord"] * df_ohe["responsibility_ord"]
 
 
+
 X = df_ohe.drop(["Target"], axis=1)
+
+print(X.columns.tolist())
 y = df_ohe["Target"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state=42, stratify=y)
 
