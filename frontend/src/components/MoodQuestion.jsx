@@ -5,12 +5,10 @@ import purpleClickedHeart from "../assets/purpleClickedHeart.png";
 import blueClickedHeart from "../assets/blueClickedHeart.png";
 import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
-import { useState } from "react";
+//Mood question function, uses props to get the state value "selected" from Home.jsx
+//setSelected is a function to update selected value
+export default function MoodQuestion({selected, setSelected}){
 
-export default function MoodQuestion(){
-
-    //selectedMood = "", initalizing state
-    const [selectedMood, setSelectedMood] = useState("");
     //Mood Options
     //JS array of objects (moods)
     const moodOptions = [
@@ -52,7 +50,8 @@ export default function MoodQuestion(){
           
           {/*For every object inside moodOptions array this creates a button*/}
           {moodOptions.map((option) => {
-            const isSelected = selectedMood === option.value;
+            //checks if selected equals value and if so is shows the clicked heart image
+            const isSelected=selected===option.value;
             
             //Heart image that is displayed
             let heartImage;
@@ -68,7 +67,8 @@ export default function MoodQuestion(){
                 type="button"
                 //When clicked, it updates the state and logs which mood was selected
                 onClick={() => {
-                  setSelectedMood(option.value);
+                  //sends selected value back to Home.jsx
+                  setSelected(option.value);
                   console.log("Selected mood:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"

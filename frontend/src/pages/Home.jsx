@@ -10,30 +10,31 @@ import Question3 from "../assets/3rdQuestion.png";
 import revealButton from "../assets/revealButton.png";
 import heartLocket from "../assets/heartLocket.png";
 import stickersGroupCam from "../assets/stickersGroupCam.png";
-import { Link } from "react-router-dom";
-import {useEffect} from "react";
+import { useState } from "react";
 import{useLocation}from "react-router-dom";
+import{useNavigate}from "react-router-dom";
 
 
 export default function Home() {
 
     //gets current url info
     const location=useLocation();
-    //runs when the route/url changes
-    useEffect(()=>{
-        //if url has a # so for our #intro
-        if(location.hash){
-            //finds the elements with the # id
-            const element=document.getElementById(location.hash.substring(1));
-            //if it exists, then it scrolls to it
-            if(element){
-                element.scrollIntoView({behavior:"smooth"});
-            }
-            }
-            else{
-                window.scrollTo({top:0,behavior:"smooth"});
-            }
-        },[location]);
+    //allows you to manually change the user's page
+    const navigate = useNavigate();
+    //react state vars to store when the user clicks an answer
+    const [energy, setEnergy]= useState(null);
+    const [deadlines, setDeadlines]= useState(null);
+    const [mood, setMood]= useState(null);
+    //function used when the reveal button is clicked
+    const handleRevealClick = ()=>{
+        //checks if the user picked an answer for all the questions
+        if(energy==null || deadlines==null|| mood==null){
+            //error handling, user needs to answer all questions
+            alert("Error: Please answer all questions to get your results!");
+            return;
+        } //sends user to results page
+        navigate("/results");
+    };
     
     return (
         //Section 1: Title, utilizing clamp to make it responsive for different screens
@@ -78,7 +79,7 @@ export default function Home() {
                 <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
                 Before *potentially* going out tonight,  <br /> what’s your vibe?
                 </h1>
-                <EnergyQuestion />
+                <EnergyQuestion selected={energy} setSelected={setEnergy} />
             </div>
         </div>
 
@@ -96,7 +97,7 @@ export default function Home() {
                 <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy'] mb-2">
                 How many deadlines are looming?
                 </h1>
-                <DeadlinesQuestion />
+                <DeadlinesQuestion  selected={deadlines} setSelected={setDeadlines}/>
             </div>
         </div>
 
@@ -114,7 +115,7 @@ export default function Home() {
                 <h1 className="ml-[clamp(16px,4.5vw,60px)] mt-[clamp(14px,4.5vw,80px)] text-[clamp(12px,3.7vw,55px)] text-[#FCDDEC] font-['Emilys_Candy']">
                 What mood are you bringing into<br /> the night?
                 </h1>
-                <MoodQuestion />
+                <MoodQuestion selected={mood} setSelected={setMood} />
             </div>
         </div>
 
@@ -127,13 +128,14 @@ export default function Home() {
             />
 
             <div className="absolute inset-0 flex justify-center">
-                <Link to="/results">
+                {/*reveal button*/}
+                <button type="button" onClick={handleRevealClick}>
                     <img 
                         src={revealButton}
                         alt=""
                         className="h-[clamp(100px,24vw,400px)]"
                     />
-                </Link>
+                </button>
             </div>
 
                 <img 

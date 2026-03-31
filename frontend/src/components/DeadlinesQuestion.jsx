@@ -5,12 +5,10 @@ import purpleClickedHeart from "../assets/purpleClickedHeart.png";
 import blueClickedHeart from "../assets/blueClickedHeart.png";
 import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
-import { useState } from "react";
 
-//Energy question function
-export default function EnergyQuestion() {
-    //selectedDeadline = "", initalizing state
-    const [selectedDeadline, setSelectedDeadline] = useState("");
+//Deadline question function, uses props to get the state value "selected" from Home.jsx
+//setSelected is a function to update selected value
+export default function DeadlinesQuestion({selected, setSelected}) {
     //Deadline Options
     //JS array of objects (deadliness)
     const deadlineOptions = [
@@ -40,8 +38,9 @@ export default function EnergyQuestion() {
           
           {/*For every object inside deadlineOptions array this creates a button*/}
           {deadlineOptions.map((option) => {
-            const isSelected = selectedDeadline === option.value;
-            
+            //checks if selected equals value and if so is shows the clicked heart image
+            const isSelected=selected===option.value;
+
             //Heart image that is displayed
             let heartImage;
             if (isSelected) {
@@ -56,7 +55,8 @@ export default function EnergyQuestion() {
                 type="button"
                 //When clicked, it updates the state and logs which deadline was selected
                 onClick={() => {
-                  setSelectedDeadline(option.value);
+                  //sends selected value back to Home.jsx
+                  setSelected(option.value);
                   console.log("Selected deadline:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"
