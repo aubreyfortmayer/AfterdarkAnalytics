@@ -5,12 +5,10 @@ import purpleClickedHeart from "../assets/purpleClickedHeart.png";
 import blueClickedHeart from "../assets/blueClickedHeart.png";
 import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
-import { useState } from "react";
 
-//Energy question function
-export default function EnergyQuestion() {
-    //selectedEnergy = "", initalizing state
-    const [selectedEnergy, setSelectedEnergy] = useState("");
+//Energy question function, uses props to get the state value "selected" from Home.jsx
+//setSelected is a function to update selected value
+export default function EnergyQuestion({selected, setSelected}) {
     //Energy Options
     //JS array of objects (energys)
     const energyOptions = [
@@ -52,8 +50,9 @@ export default function EnergyQuestion() {
           
           {/*For every object inside energyOptions array this creates a button*/}
           {energyOptions.map((option) => {
-            const isSelected = selectedEnergy === option.value;
-            
+            //checks if selected equals value and if so is shows the clicked heart image
+            const isSelected=selected===option.value;
+
             //Heart image that is displayed
             let heartImage;
             if (isSelected) {
@@ -68,7 +67,8 @@ export default function EnergyQuestion() {
                 type="button"
                 //When clicked, it updates the state and logs which energy was selected
                 onClick={() => {
-                  setSelectedEnergy(option.value);
+                  //sends selected value back to Home.jsx
+                  setSelected(option.value);
                   console.log("Selected energy:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"

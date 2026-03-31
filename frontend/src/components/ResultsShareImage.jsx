@@ -11,7 +11,7 @@ export default function ResultsShareImage(){
     //tracking element to turn into png image later
     const resultsShareImage = useRef(null);
     //TO DO: change to actual result value later
-    const resultPercent=16;
+    const resultPercent=76;
     const isGoOut = resultPercent > 50;
     //if isGoOut is true, do 1st option, if not then stay in & use 2nd option
     const backgroundImage = isGoOut ? goOutImage : stayInImage;
@@ -79,7 +79,7 @@ export default function ResultsShareImage(){
                       onClick={downloadImage}
                       className="px-4 py-2 rounded-md bg-[#A9568A] border border-[#FCDDEC] text-[#FCDDEC] font-bold font-['Emilys_Candy']"
                     >
-                      Download Card
+                      Download to Share
                     </button>
       
                     <button
