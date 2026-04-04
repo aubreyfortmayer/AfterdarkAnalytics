@@ -18,7 +18,7 @@ export default function SpinTheBottle() {
 
    //relative, want to position the elements in relation to the container
    //flex item-center (vertical), justify-center (horizontal) --> position it perfectly centered 
-   return ( <div className = "relative w-80 h-80 flex items-center justify-center">
+   return ( <div className = "relative w-[clamp(280px, 40vw, 450px)] flex items-center justify-center">
     <img 
         src = {spinBoard}
         //inset-0, filling the entire container
@@ -30,7 +30,7 @@ export default function SpinTheBottle() {
         src = {bottle}
         //click the bottle to spin
         onClick = {spinBottle}
-        className = "w-39 transition-transform duration-[3000ms] cursor-pointer"
+        className = "w-[70%] transition-transform duration-[3000ms] cursor-pointer"
         style ={{
             //rotates the bottle!, translated to perfect the position of beer bottle
             transform: `translate(-25%, -35%) rotate(${rotation}deg)`,

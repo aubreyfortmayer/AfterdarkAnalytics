@@ -16,71 +16,94 @@ export default function Results() {
         //minimum height, need extra height so 140 (min-h-[140vh])
         //w-full, full width of container used
         //max width = 900 px (max-w-[900px])
-        <div className="relative w-full min-h-[1100px] bg-[#fcddec] overflow-visible">
+        <div className="w-full min-h-screen bg-[#fcddec] flex flex-col items-center px-4 py-6">
             
-            <img 
-            src = {Title}
-            //mt-10, moving the title down from the top of the page
-            className = "absolute top-8 left-1/2 -translate-x-1/2 w-[360px]"
-            />
+            
+            <div className = "flex items-center gap-2">     
 
-            <img 
-                src = {CuteKissMark}
-                alt = "100% Cute!"
-                className = "absolute w-[250px] rotate-[10deg] right-8 top-20"
-            />
+
+                <div className = "relative flex-justify-center">
+                    <img 
+                    src = {Title}
+                    //mt-10, moving the title down from the top of the page
+                    className = "w-[clamp(180px, 30vw, 300px)]"
+                    />
+
+    
+
+                </div>
+        
+            </div>
 
 
             {/*layout box, mt-20 moving it from elemennt ABOVE it, so the title page
                 relative, items inside the box will position themselves based on
                 this box, NOT the page
             */}
-            <div className = "absolute top-[180px] left-1/2 -translate-x-1/2">
+            <div className = "flex justify-center mt-[clamp(20px, 6vw, 80px)]">
                 {/*centered horizontally + moved 35 px to right*/}
-                          <SpinTheBottle/>
+                <div className="flex items-start gap-2 max-w-[500px] w-full justify-center">
+                    <SpinTheBottle/>
 
-                    </div>
+                </div>
+
+
+                
+                    <img 
+                    src = {CuteKissMark}
+                    className="w-[clamp(40px, 6vw, 80px)] rotate-[12deg] translate-y-[10%" />
+                
+            
+
+            </div>
                    
 
-                {/*absolute, placed within the relative container*/}
-                <div className = "absolute left-20 top-[360px] scale-[1.25]">
                 
-                <img
-                src = {MartiniStickers}
-                className = " w-[195px] mb-2"
-                />
+            <div className= "w-full max-w-[900px] flex flex-col md:flex-row items-center justify-center gap-[clamp(20px, 6vw, 80px)] mt-[clamp(20px, 6vw, 80px)]">
                 
-                
-                 <Martini probability={100}/>
+                {/*left*/}
+                <div className = "flex flex-col items-center gap-6">
+                    
+                    <div className = "flex gap-3">
+                        <img src= {Heart} 
+                        className = "w-[clamp(20px, 6vw, 60px)]" />
+
+
+                        <img src = {Star} 
+                        className="w-[clamp(20px, 6vw, 60px)]" />
+
+                    </div>
+
+
+                <div className="flex flex-col items-center gap-2">
+                    <img
+                        src={MartiniStickers}
+                        className="w-[clamp(100px, 20vw, 180px)]"
+                    />
+
+                    <Martini probability={100}/>
 
                 </div>
+            </div>
+
+                {/* right */}
+                <div className = "flex justify-center">
+                    <ResultsBox probability={100}/>
+
+                </div>
+
+
+            </div>
                 
-                <div className= "absolute right-[120px] top-[380px]">
-                    <ResultsBox probability = {100}/>
-                    </div>
-               
-     
 
             {/*mt-auto, the music button is pushed down as far as it can be */}
-            <div className = "absolute left-[38%] top-[870px] flex items-center gap-4"> 
+            <div className = "mt-[clamp(30px, 8vw, 120px)]"> 
                 {/*music button positioned towards bottom */}
                 <MusicPlayer />
-                </div>
-                
-                
-            {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
-            <img 
-            src = {Heart}
-            className = "absolute top-[470px] left-[48%] w-[80px]" 
-            />
-            
-            {/*star sticker, -left makes the pixel value negative*/}
-            <img 
-            src = {Star}
-            className = "absolute top-[560px] left-[30%] w-[70px]"
-            />
+            </div>
 
-        </div>
+             </div>
 
     );
+    
 }

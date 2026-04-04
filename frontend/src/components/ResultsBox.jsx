@@ -1,6 +1,7 @@
 import ResultsBoxPicture from "../assets/ResultsBox.png"
 
 export default function ResultsBox({probability}) {
+    //probability messages!
     function showMessage(probability) {
         let message = ""
 
@@ -31,25 +32,25 @@ export default function ResultsBox({probability}) {
     
     }
     
-    
+    //displaying the results box
     return (
         <div className="relative flex justify-center items-center mt-10">
 
             <img
                 src = {ResultsBoxPicture}
                 alt = "Results Box"
-                className = "w-[420px]"
+                className = "w-[clamp(220px, 40vw, 420px)]"
             />
 
         <div className="absolute text-center"
         style ={{fontFamily: "'Emilys Candy', cursive"}}
         >
             
-            <h2 className="text-4xl">
+            <h2 className="text-[clamp(18px, 4vw, 36px)]">
                 {probability}% </h2>
 
 
-            <p className = "text-2xl mt-5">
+            <p className = "text-[clamp(12px,2.5vw,24px)]">
                 {showMessage(probability)}
                 </p> 
         </div>
