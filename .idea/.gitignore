@@ -2,5 +2,5 @@
 /workspace.xml
 /venv
 /backend/.env
-/backend/__pychace__
+/backend/__pycache__/
 
