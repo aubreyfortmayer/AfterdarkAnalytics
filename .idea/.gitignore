@@ -1,5 +1,6 @@
-# Default ignored files
 /shelf/
 /workspace.xml
 /venv
 /backend/.env
+/backend/__pychace__
+
