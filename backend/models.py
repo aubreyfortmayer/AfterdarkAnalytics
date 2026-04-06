@@ -1,25 +1,31 @@
-from sqlalchemy import Column, Integer, ForeignKey, DateTime
-from sqlalchemy.sql import func
+from sqlalchemy import ForeignKey, DateTime
+from sqlalchemy.orm import mapped_column, Mapped
 from database import Base
 
 class Responses(Base):
     __tablename__ = "responses"
-    id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
-    energy_level = Column(Integer)
-    responsibility_level = Column(Integer)
-    submitted_at = Column(DateTime)
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    energy_level: Mapped[int] = mapped_column(nullable=False)
+    responsibility_level: Mapped[int] = mapped_column(nullable=False)
+    submitted_at: Mapped[DateTime] = mapped_column(DateTime)
 
-class recommendations(Base):
-        __tablename__ = "recommendations"
-        id = Column(Integer, primary_key=True, index=True)
-        response_id = Column(Integer, ForeignKey("responses.id"))
-        ml_score = Column(Integer)
-        confidence_score = Column(Integer)
+class Recommendations(Base):
+    __tablename__ = "recommendations"
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    response_id: Mapped[int] = mapped_column(ForeignKey("responses.id"), nullable=False)
+    ml_score: Mapped[int] = mapped_column(nullable=False)
+    confidence_score: Mapped[int] = mapped_column(nullable=False)
 
-class users(Base):
-      __tablename__ = "users"
-      username = Column(Integer, primary_key=True)
+class Users(Base):
+    __tablename__ = "users"
+    username: Mapped[str] = mapped_column(nullable=False)
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    email: Mapped[str] = mapped_column(nullable=False)
+    password_hash: Mapped[str]
+
+
+
 
 
 
