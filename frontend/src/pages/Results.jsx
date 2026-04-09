@@ -68,9 +68,7 @@ export default function Results() {
                 <MusicPlayer />
                 </div>
         
-                
-                
-                
+              
             {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
             <img 
             src = {Heart}
@@ -82,11 +80,8 @@ export default function Results() {
             src = {Star}
             className = "absolute top-[560px] left-[30%] w-[70px]"
             />
-
-          
+      
             <ResultsShareImage />
-     
-            
         </div>
 
     );

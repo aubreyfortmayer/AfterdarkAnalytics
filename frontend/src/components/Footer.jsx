@@ -10,14 +10,14 @@ export default function Footer() {
             <img 
                 src={FooterBackground}
                 alt=""
-                className="w-full h-[clamp(100px,16vw,270px)]"
+                className="w-full h-[clamp(70px,8vw,135px)]"
             />
             {/*Overlay div for footer*/}
              <div className="absolute inset-0 flex justify-between items-center">
               
                 {/*AfterDark Logo*/}
                 <Link to="/">
-                    <img src={Logo} alt="AfterDark Logo" className="h-[clamp(50px,15vw,250px)] cursor-pointer" />
+                    <img src={Logo} alt="AfterDark Logo" className="h-[clamp(60px,8vw,125px)] cursor-pointer" />
                 </Link>
             {/*TO DO: change to link sharing feature*/}
                 {/*Share Button*/}
@@ -28,7 +28,7 @@ export default function Footer() {
 
                 className="cursor-pointer"
                 >
-                    <img src={ShareButton} alt="Share" className="h-[clamp(50px,10vw,200px)] cursor-pointer" />
+                    <img src={ShareButton} alt="Share" className="mt-[clamp(5px,1vw,20px)] h-[clamp(40px,6vw,200px)] cursor-pointer" />
                 </button>
             </div>
         </footer>

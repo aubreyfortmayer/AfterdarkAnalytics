@@ -40,7 +40,7 @@ export default function ResultsShareImage(){
               onClick={() => setShowPopup(true)}
               className="px-6 py-4 m-10 rounded-lg bg-[#A9568A] border border-[#FCDDEC] text-[#FCDDEC] font-bold font-['Emilys_Candy'] text-[25px]"
             >
-              Share With Friends
+              Share with Friends
             </button>
 
             {/*if showPopup is true then displays it all*/}
