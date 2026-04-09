@@ -3,6 +3,7 @@ import {toPng} from "html-to-image";
 
 import goOutImage from "../assets/goOutImage.png"
 import stayInImage from "../assets/stayInImage.png"
+import shareButton from "../assets/shareButton.png";
 
 export default function ResultsShareImage(){
 
@@ -35,12 +36,13 @@ export default function ResultsShareImage(){
 
         return (
           <>
-            {/*share with friends button*/}
-            <button
-              onClick={() => setShowPopup(true)}
-              className="px-6 py-4 m-10 rounded-lg bg-[#A9568A] border border-[#FCDDEC] text-[#FCDDEC] font-bold font-['Emilys_Candy'] text-[25px]"
-            >
-              Share with Friends
+            <button type="button"
+              onClick={() => setShowPopup(true)}>
+              <img 
+                src={shareButton}
+                alt=""
+                className="h-[clamp(100px,10vw,400px)]"
+              />
             </button>
 
             {/*if showPopup is true then displays it all*/}
