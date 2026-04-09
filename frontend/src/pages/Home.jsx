@@ -11,7 +11,7 @@ import Question3 from "../assets/3rdQuestion.png";
 import revealButton from "../assets/revealButton.png";
 import heartLocket from "../assets/heartLocket.png";
 import stickersGroupCam from "../assets/stickersGroupCam.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import{useLocation}from "react-router-dom";
 import{useNavigate}from "react-router-dom";
 
@@ -20,6 +20,14 @@ export default function Home() {
 
     //gets current url info
     const location=useLocation();
+    useEffect(()=> {
+        if(location.hash){
+            const element=document.querySelector(location.hash);
+            if(element){
+                element.scrollIntoView({behavior:"smooth"});
+            }
+        }
+    },[location]);
     //allows you to manually change the user's page
     const navigate = useNavigate();
     //react state vars to store when the user clicks an answer
@@ -46,7 +54,7 @@ export default function Home() {
                 className="self-start pl-[clamp(40px,8vw,150px)] h-[clamp(150px,20vw,400px)]"
             />
         
-        <div id="intro" className="flex justify-end w-full pr-6">
+        <div className="flex justify-end w-full pr-6">
             <img 
                 src={Title2}
                 alt=""
@@ -55,7 +63,7 @@ export default function Home() {
         </div>
 
         {/*Section 2: Intro*/}
-        <div className="flex flex-col w-full">
+        <div id="intro" className="flex flex-col w-full">
             <img 
                 src={intro}
                 alt=""
