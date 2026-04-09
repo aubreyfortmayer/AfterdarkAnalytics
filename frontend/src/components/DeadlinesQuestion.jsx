@@ -62,12 +62,12 @@ export default function DeadlinesQuestion({selected, setSelected}) {
                 className="flex gap-4 w-full cursor-pointer"
               >
                 {/*Button heart images*/}
-                  <img
+                <img
                     src={heartImage}
                     alt="heart button"
-                    className="h-[clamp(15px,4.5vw,60px)]"
+                    className="h-[clamp(18px,3.3vw,50px)]"
                   />
-                  <span className=" text-[clamp(11px,3vw,35px)] text-[#FCDDEC] font-['Emilys_Candy']">{option.label}</span>
+                  <span className=" text-[clamp(15px,1.7vw,40px)] text-[#FCDDEC] font-['Emilys_Candy']">{option.label}</span>
               </button>
             );
           })}
