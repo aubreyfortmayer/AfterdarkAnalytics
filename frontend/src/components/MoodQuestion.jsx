@@ -16,31 +16,31 @@ export default function MoodQuestion({selected, setSelected}){
         label: "Stressed",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "stressed",
+        value: "Stressed",
       },
       {
         label: "Neutral",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "neutral",
+        value: "Neutral",
       },
       {
         label: "Sad",
         unclicked: purpleUnclickedHeart,
         clicked: purpleClickedHeart,
-        value: "sad",
+        value: "Sad",
       },
       {
         label: "Relaxed",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "relaxed",
+        value: "Relaxed",
       },
       {
         label: "Happy",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "happy",
+        value: "Happy",
       },
     ];
   

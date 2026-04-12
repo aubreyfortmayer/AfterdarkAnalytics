@@ -16,31 +16,31 @@ export default function EnergyQuestion({selected, setSelected}) {
         label: "Exhausted",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "exhausted",
+        value: "Exhausted",
       },
       {
         label: "Low Energy",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "lowEnergy",
+        value: "Low Energy",
       },
       {
         label: "Neutral",
         unclicked: purpleUnclickedHeart,
         clicked: purpleClickedHeart,
-        value: "neutral",
+        value: "Neutral",
       },
       {
         label: "Energized",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "energized",
+        value: "Energized",
       },
       {
         label: "Extremely Energized",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "extremelyEnergized",
+        value: "Extremely Energized",
       },
     ];
   

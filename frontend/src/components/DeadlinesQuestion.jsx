@@ -16,19 +16,19 @@ export default function DeadlinesQuestion({selected, setSelected}) {
         label: "Low      - (No deadlines in the next week)",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "low"
+        value: "Low (No deadlines in the next week)"
       },
       {
         label: "Medium - (Deadlines in the next week)",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "medium"
+        value: "Medium (Deadlines in the next week)"
       },
       {
         label: "High     - (Deadlines in the next 3 days)",
         unclicked: purpleUnclickedHeart,
         clicked: purpleClickedHeart,
-        value: "high"
+        value: "High (Deadlines in the next 3 days)"
       },
     ];
   
