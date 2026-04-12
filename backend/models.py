@@ -1,4 +1,4 @@
-from sqlalchemy import ForeignKey, DateTime
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped
 from database import Base
 
@@ -10,8 +10,6 @@ class Responses(Base):
     mood_level: Mapped[str] = mapped_column(nullable=False)
     energy_level: Mapped[str] = mapped_column(nullable=False)
     responsibility_level: Mapped[str] = mapped_column(nullable=False)
-    
-   # submitted_at: Mapped[DateTime] = mapped_column(DateTime)
 
 class Recommendations(Base):
     __tablename__ = "recommendations"
@@ -20,4 +18,3 @@ class Recommendations(Base):
     will_go_out: Mapped[bool] = mapped_column(nullable=False)
     prediction: Mapped[int] = mapped_column(nullable=False)
     probability: Mapped[float] = mapped_column(nullable=False)
-    #created_at: Mapped[DateTime] = mapped_column(DateTime)
