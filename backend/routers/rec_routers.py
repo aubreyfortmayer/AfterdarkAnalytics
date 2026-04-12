@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from crud.crud import create_response, create_recommendation
 from schemas.recommendation_schemas import RecommendationResponse
@@ -21,10 +21,8 @@ weather_categories = ["Clear Skies", "Cold", "Rain", "Warm"]
 
 @router.post("/predict/", response_model=RecommendationResponse)
 def predict(payload: ResponseCreate, db: Session = Depends(get_db)):
-    print("REQUEST:", payload)
-    print("request recieved")
     response = create_response(db, payload)
-    print("created response")
+
     # encode weather
     weather_df = pd.DataFrame([[payload.forecasted_weather]], columns=["Forecasted Weather"])
     weather_encoded = ohe_weather.transform(weather_df)

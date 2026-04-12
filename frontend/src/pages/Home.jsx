@@ -44,9 +44,7 @@ export default function Home() {
             },
             body: JSON.stringify(payload)
         });
-
-        console.log(payload)
-
+        
         if (!response.ok) {
             throw new Error("Backend request failed");
         }
@@ -60,12 +58,6 @@ export default function Home() {
             alert("Error: Please answer all questions to get your results!");
             return;
         }
-
-        console.log({
-            energy,
-            mood,
-            deadlines
-        });
 
         try {
             const payload = {
