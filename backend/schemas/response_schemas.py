@@ -1,6 +1,4 @@
 from pydantic import BaseModel
-from datetime import datetime
-
 # schemas for data validation
 
 class ResponseBase(BaseModel):
