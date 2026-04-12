@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from crud.crud import create_response, create_recommendation
-from schemas.recommendation_schemas import RecommendationRequest, RecommendationResponse
+from schemas.recommendation_schemas import RecommendationResponse
 from schemas.response_schemas import ResponseCreate
 from database import get_db
 import pandas as pd
