@@ -1,20 +1,16 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 # schemas for data validation
 
-class RecommendationBase(BaseModel):
-    response_id: int
-    ml_score: float
-    confidence_score: float
+class RecommendationRequest(BaseModel):
+    forecasted_weather: str
+    mood_level: str
+    energy_level: str
+    responsibility_level: str
+    #submitted_at: str
 
-class RecommendationCreate(RecommendationBase):
-    pass
-
-class RecommendationUpdate(BaseModel):
-    ml_score: float | None = None
-    confidence_score: float | None = None
-
-class Recommendation(RecommendationBase):
-    id: int
-    class Config: 
-        from_attributes = True
+class RecommendationResponse(BaseModel):
+    will_go_out: bool
+    prediction: int
+    probability: float
