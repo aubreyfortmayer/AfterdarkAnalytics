@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import MusicPlayer from "../components/MusicPlayer";
 import Heart from "../assets/heartMusicButton.png";
 import Star from "../assets/starMusicButton.png";
@@ -10,6 +11,22 @@ import ResultsShareImage from "../components/ResultsShareImage";
 import ResultsBox from "../components/ResultsBox"
 
 export default function Results() {
+    // added this for backend support
+    const location = useLocation();
+    const data = location.state;
+
+    // safety check (prevents crash if page is refreshed)
+    if (!data) {
+        return (
+            <div className="flex items-center justify-center h-screen bg-[#fcddec] text-black">
+                Missing results. Please go back and try again.
+            </div>
+        );
+    }
+
+    const { will_go_out, prediction, probability } = data;
+
+
     return (
         //stack vertical (flex)
         // center everything horizontally (items-center), 
@@ -52,12 +69,12 @@ export default function Results() {
                 />
                 
                 
-                 <Martini probability={100}/>
+                 <Martini probability={probability}/>
 
                 </div>
                 
                 <div className= "absolute right-[120px] top-[380px]">
-                    <ResultsBox probability = {100}/>
+                    <ResultsBox probability = {probability}/>
                     </div>
                
      
@@ -68,7 +85,9 @@ export default function Results() {
                 <MusicPlayer />
                 </div>
         
-              
+                
+                
+                
             {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
             <img 
             src = {Heart}
@@ -80,8 +99,9 @@ export default function Results() {
             src = {Star}
             className = "absolute top-[560px] left-[30%] w-[70px]"
             />
-      
+        
             <ResultsShareImage />
+    
         </div>
 
     );
