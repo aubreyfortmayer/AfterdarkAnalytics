@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from models import Responses, Recommendations, Users
-from schemas import predict_schema, recommendation_schemas, user_schemas, response_schemas
+from schemas import recommendation_schemas, user_schemas, response_schemas
 from datetime import datetime
 
 
@@ -21,12 +21,15 @@ def get_user_by_id(db: Session, user_id: int):
 
 #responses
 def create_response(db: Session, response: response_schemas.ResponseCreate):
-    submitted_at = response.submitted_at or datetime.utcnow()
+    #submitted_at = response.submitted_at or datetime.utcnow()
+    
     new_response = Responses(
-        user_id=response.user_id,
+        #user_id= 1,
+        forecasted_weather=response.forecasted_weather,
         energy_level=response.energy_level,
+        mood_level=response.mood_level,
         responsibility_level=response.responsibility_level,
-        submitted_at=submitted_at
+        #submitted_at=submitted_at
     )
     db.add(new_response)
     db.commit()
@@ -40,32 +43,17 @@ def get_responses_by_user(db: Session, user_id: int):
     return db.query(Responses).filter(Responses.user_id == user_id).all()
 
 # recommendations
+def create_recommendation(db: Session, response_id: int, ml_result: dict):
+    print("create recommendation")
 
-def create_recommendation(db: Session, recommendation: recommendation_schemas.RecommendationCreate):
     new_recommendation = Recommendations(
-        response_id=recommendation.response_id,
-        ml_score=recommendation.ml_score,
-        confidence_score=recommendation.confidence_score
+        response_id=response_id,
+        will_go_out=ml_result["will_go_out"],
+        prediction=ml_result["prediction"],
+        probability=ml_result["probability"],
+        #created_at=datetime.utcnow()
     )
     db.add(new_recommendation)
     db.commit()
     db.refresh(new_recommendation)
     return new_recommendation
-
-def get_recommendations(db: Session):
-    return db.query(Recommendations).all()
-
-def get_recommendations_by_response(db: Session, response_id: int):
-    return db.query(Recommendations).filter(Recommendations.response_id == response_id).all()
-
-def update_recommendation(db: Session, recommendation_id: int, updates: recommendation_schemas.RecommendationUpdate):
-    db_rec = db.query(Recommendations).filter(Recommendations.id == recommendation_id).first()
-    if db_rec is None:
-        return None
-    
-    for key, value in updates.dict(exclude_unset=True).items():
-        setattr(db_rec, key, value)
-    
-    db.commit()
-    db.refresh(db_rec)
-    return db_rec
