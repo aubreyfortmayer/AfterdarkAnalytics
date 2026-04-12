@@ -1,23 +1,7 @@
 from sqlalchemy.orm import Session
-from models import Responses, Recommendations, Users
-from schemas import recommendation_schemas, user_schemas, response_schemas
+from models import Responses, Recommendations
+from schemas import response_schemas
 from datetime import datetime
-
-
-
-#USERS
-def create_user(db: Session, user: user_schemas.UserCreate):
-    new_user = Users(**user.dict())
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-    return new_user
-
-def get_users(db: Session):
-    return db.query(Users).all()
-
-def get_user_by_id(db: Session, user_id: int):
-    return db.query(Users).filter(Users.id == user_id).first()
 
 #responses
 def create_response(db: Session, response: response_schemas.ResponseCreate):
@@ -38,9 +22,6 @@ def create_response(db: Session, response: response_schemas.ResponseCreate):
 
 def get_responses(db: Session):
     return db.query(Responses).all()
-
-def get_responses_by_user(db: Session, user_id: int):
-    return db.query(Responses).filter(Responses.user_id == user_id).all()
 
 # recommendations
 def create_recommendation(db: Session, response_id: int, ml_result: dict):
