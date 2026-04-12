@@ -34,17 +34,58 @@ export default function Home() {
     const [energy, setEnergy]= useState(null);
     const [deadlines, setDeadlines]= useState(null);
     const [mood, setMood]= useState(null);
-    //function used when the reveal button is clicked
-    const handleRevealClick = ()=>{
-        //checks if the user picked an answer for all the questions
-        if(energy==null || deadlines==null|| mood==null){
-            //error handling, user needs to answer all questions
+    
+    // added this to actually send stuff to the backend - AUBREY
+    const submitToBackend = async (payload) => {
+        const response = await fetch("http://127.0.0.1:8000/predict/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        console.log(payload)
+
+        if (!response.ok) {
+            throw new Error("Backend request failed");
+        }
+
+        return await response.json();
+    };
+
+    // edited this also - AUBREY
+    const handleRevealClick = async () => {
+        if (energy == null || deadlines == null || mood == null) {
             alert("Error: Please answer all questions to get your results!");
             return;
-        } //sends user to results page
-        navigate("/results");
+        }
+
+        console.log({
+            energy,
+            mood,
+            deadlines
+        });
+
+        try {
+            const payload = {
+                forecasted_weather: "Clear Skies",
+                mood_level: mood,
+                energy_level: energy,
+                responsibility_level: deadlines
+            };
+
+            const data = await submitToBackend(payload);
+
+            navigate("/results", { state: data });
+
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong connecting to the server.");
+        }
     };
-    
+
+
     return (
         //Section 1: Title, utilizing clamp to make it responsive for different screens
         <div className="flex flex-col items-center -mt-[clamp(12px,5vw,25px)]">
@@ -78,7 +119,6 @@ export default function Home() {
         </div>
 
         {/*Section 3: User Input Questions*/}
-
         {/*Question 1 Background div*/}
         <div id="questions" className="relative flex justify-center">
 
