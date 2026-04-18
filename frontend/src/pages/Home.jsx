@@ -11,7 +11,7 @@ import Question3 from "../assets/3rdQuestion.png";
 import revealButton from "../assets/revealButton.png";
 import heartLocket from "../assets/heartLocket.png";
 import stickersGroupCam from "../assets/stickersGroupCam.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import{useLocation}from "react-router-dom";
 import{useNavigate}from "react-router-dom";
 
@@ -20,23 +20,64 @@ export default function Home() {
 
     //gets current url info
     const location=useLocation();
+    useEffect(()=> {
+        if(location.hash){
+            const element=document.querySelector(location.hash);
+            if(element){
+                element.scrollIntoView({behavior:"smooth"});
+            }
+        }
+    },[location]);
     //allows you to manually change the user's page
     const navigate = useNavigate();
     //react state vars to store when the user clicks an answer
     const [energy, setEnergy]= useState(null);
     const [deadlines, setDeadlines]= useState(null);
     const [mood, setMood]= useState(null);
-    //function used when the reveal button is clicked
-    const handleRevealClick = ()=>{
-        //checks if the user picked an answer for all the questions
-        if(energy==null || deadlines==null|| mood==null){
-            //error handling, user needs to answer all questions
+    
+    // added this to actually send stuff to the backend - AUBREY
+    const submitToBackend = async (payload) => {
+        const response = await fetch("http://127.0.0.1:8000/predict/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) {
+            throw new Error("Backend request failed");
+        }
+
+        return await response.json();
+    };
+
+    // edited this also - AUBREY
+    const handleRevealClick = async () => {
+        if (energy == null || deadlines == null || mood == null) {
             alert("Error: Please answer all questions to get your results!");
             return;
-        } //sends user to results page
-        navigate("/results");
+        }
+
+        try {
+            const payload = {
+                forecasted_weather: "Clear Skies",
+                mood_level: mood,
+                energy_level: energy,
+                responsibility_level: deadlines
+            };
+
+            const data = await submitToBackend(payload);
+
+            navigate("/results", { state: data });
+
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong connecting to the server.");
+        }
     };
-    
+
+
     return (
         //Section 1: Title, utilizing clamp to make it responsive for different screens
         <div className="flex flex-col items-center -mt-[clamp(12px,5vw,25px)]">
@@ -46,7 +87,7 @@ export default function Home() {
                 className="self-start pl-[clamp(40px,8vw,150px)] h-[clamp(150px,20vw,400px)]"
             />
         
-        <div id="intro" className="flex justify-end w-full pr-6">
+        <div className="flex justify-end w-full pr-6">
             <img 
                 src={Title2}
                 alt=""
@@ -55,7 +96,7 @@ export default function Home() {
         </div>
 
         {/*Section 2: Intro*/}
-        <div className="flex flex-col w-full">
+        <div id="intro" className="flex flex-col w-full">
             <img 
                 src={intro}
                 alt=""
@@ -70,7 +111,6 @@ export default function Home() {
         </div>
 
         {/*Section 3: User Input Questions*/}
-
         {/*Question 1 Background div*/}
         <div id="questions" className="relative flex justify-center">
 

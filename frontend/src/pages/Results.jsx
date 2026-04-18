@@ -1,6 +1,5 @@
+import { useLocation } from "react-router-dom";
 import MusicPlayer from "../components/MusicPlayer";
-import Heart from "../assets/heartMusicButton.png";
-import Star from "../assets/starMusicButton.png";
 import Title from "../assets/ResultsTitle.png";
 import SpinTheBottle from "../components/SpinTheBottle"
 import Martini from "../components/Martini"
@@ -10,6 +9,22 @@ import ResultsShareImage from "../components/ResultsShareImage";
 import ResultsBox from "../components/ResultsBox"
 
 export default function Results() {
+    // added this for backend support
+    const location = useLocation();
+    const data = location.state;
+
+    // safety check (prevents crash if page is refreshed)
+    if (!data) {
+        return (
+            <div className="flex items-center justify-center h-screen bg-[#fcddec] text-black">
+                Missing results. Please go back and try again.
+            </div>
+        );
+    }
+
+    const { will_go_out, prediction, probability } = data;
+
+
     return (
         //flex flex-col: stacks vertically, items-center: centers horizontally, px-4: padding left or right, py: padding top or bottom
         <div className="relative w-full min-h-screen bg-[#fcddec] flex flex-col items-center px-4 py-6">
@@ -80,7 +95,7 @@ export default function Results() {
                         className="w-[clamp(80px, 8vw, 120px)]"
                     />
 
-                    <Martini probability={100}/>
+                    <Martini probability={probability}/>
        
                   
 
@@ -91,7 +106,7 @@ export default function Results() {
 
                 {/*centered horizontally*/}
                 <div className = "flex flex-col items-center gap-6">
-                    <ResultsBox probability={100}/>
+                    <ResultsBox probability={probability}/>
 
                 </div>
 
@@ -112,7 +127,6 @@ export default function Results() {
 
    
              </div>
-
     );
     
 }
