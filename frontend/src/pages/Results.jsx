@@ -5,28 +5,26 @@ import Title from "../assets/ResultsTitle.png";
 import SpinTheBottle from "../components/SpinTheBottle"
 import Martini from "../components/Martini"
 import MartiniStickers from "../assets/MartiniSticker.png"
-import CuteKissMark from "../assets/100CuteKiss.png"
+import CuteKissMark from "../assets/100Cute.png"
+import ResultsShareImage from "../components/ResultsShareImage";
 import ResultsBox from "../components/ResultsBox"
 
 export default function Results() {
     return (
-        //stack vertical (flex)
-        // center everything horizontally (items-center), 
-        // text center (text-center), 
-        //minimum height, need extra height so 140 (min-h-[140vh])
-        //w-full, full width of container used
-        //max width = 900 px (max-w-[900px])
-        <div className="w-full min-h-screen bg-[#fcddec] flex flex-col items-center px-4 py-6">
+        //flex flex-col: stacks vertically, items-center: centers horizontally, px-4: padding left or right, py: padding top or bottom
+        <div className="relative w-full min-h-screen bg-[#fcddec] flex flex-col items-center px-4 py-6">
             
-            
+            {/* title! flex: horizonal, items-center but vertical*/}
             <div className = "flex items-center gap-2">     
 
 
-                <div className = "relative flex-justify-center">
+                <div className = "relative flex justify-center">
                     <img 
                     src = {Title}
-                    //mt-10, moving the title down from the top of the page
-                    className = "w-[clamp(180px, 30vw, 300px)]"
+                    //clamp determines min and max size! helps w going from smaller screens to larger screens 
+                    //min: 180
+                    //max: 300 
+                    className = "w-100 md:w-100 lg:w-150"
                     />
 
     
@@ -36,58 +34,63 @@ export default function Results() {
             </div>
 
 
-            {/*layout box, mt-20 moving it from elemennt ABOVE it, so the title page
-                relative, items inside the box will position themselves based on
-                this box, NOT the page
-            */}
-            <div className = "flex justify-center mt-[clamp(20px, 6vw, 80px)]">
-                {/*centered horizontally + moved 35 px to right*/}
-                <div className="flex items-start gap-2 max-w-[500px] w-full justify-center">
-                    <SpinTheBottle/>
-
-                </div>
-
-
-                
-                    <img 
+            {/*centered horizontally 
+            mt-[clamp] smallest it can be - 20px
+            largest = - 80px */}
+            <div className = "flex justify-center mt-[clamp(20px, 6vw, 80px)] items-center gap-2">
+                {/*horizontal, max width of 500px, w-full fills all the available space, justify-center: center inside the container  */}
+                <SpinTheBottle/>
+                <div className="flex items-start">
+                    <img
                     src = {CuteKissMark}
-                    className="w-[clamp(40px, 6vw, 80px)] rotate-[12deg] translate-y-[10%" />
-                
-            
-
+                    className="w-[clamp(8px, 1.5vw, 16px)] h-auto rotate-[10deg] translate-y-[30px] scale-75" 
+                    />
+                </div>
             </div>
                    
 
-                
-            <div className= "w-full max-w-[900px] flex flex-col md:flex-row items-center justify-center gap-[clamp(20px, 6vw, 80px)] mt-[clamp(20px, 6vw, 80px)]">
+             {/*md: flex-col, we want to stack everything vertically
+             max width of 900 px, gap is attempting to fix the space bt the items... need to fix, mt: adding space bt each component
+             
+             */}   
+            <div className= "w-full max-w-[1000px] flex flex-col md:flex-row items-center justify-center gap-[clamp(20px, 6vw, 80px)] mt-[clamp(20px, 6vw, 80px)]">
                 
                 {/*left*/}
-                <div className = "flex flex-col items-center gap-6">
-                    
-                    <div className = "flex gap-3">
-                        <img src= {Heart} 
-                        className = "w-[clamp(20px, 6vw, 60px)]" />
+                <div className = "flex flex-col items-center gap-4">
+                    <div className= "flex flex-col items-center gap-2">
+                        {/* <div className="flex gap-2">
+                            <img src= {Heart} 
+                            // className = "w-[40px]" />
 
-
-                        <img src = {Star} 
-                        className="w-[clamp(20px, 6vw, 60px)]" />
+                            // <img src = {Star} 
+                            // className="w-[20px] h-auto border-4 border-red-500" />  
+                        </div> */}
 
                     </div>
+                
 
 
+                {/*items vertically stacked but everything centered horizontally, gap bt items */}
                 <div className="flex flex-col items-center gap-2">
+ 
+                    
+                    
                     <img
                         src={MartiniStickers}
-                        className="w-[clamp(100px, 20vw, 180px)]"
+                        className="w-[clamp(80px, 8vw, 120px)]"
                     />
 
                     <Martini probability={100}/>
+       
+                  
 
                 </div>
             </div>
 
                 {/* right */}
-                <div className = "flex justify-center">
+
+                {/*centered horizontally*/}
+                <div className = "flex flex-col items-center gap-6">
                     <ResultsBox probability={100}/>
 
                 </div>
@@ -96,12 +99,18 @@ export default function Results() {
             </div>
                 
 
-            {/*mt-auto, the music button is pushed down as far as it can be */}
+            {/*mt-space above music player, space depending on clamp + screen size */}
             <div className = "mt-[clamp(30px, 8vw, 120px)]"> 
                 {/*music button positioned towards bottom */}
                 <MusicPlayer />
             </div>
 
+
+            <div className = "flex justify-center mt-[clamp(20px, 6vw, 60px)]">
+                <ResultsShareImage />
+                </div> 
+
+   
              </div>
 
     );

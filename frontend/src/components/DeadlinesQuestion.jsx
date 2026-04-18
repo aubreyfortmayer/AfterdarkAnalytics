@@ -6,41 +6,29 @@ import blueClickedHeart from "../assets/blueClickedHeart.png";
 import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
 
-//Energy question function, uses props to get the state value "selected" from Home.jsx
+//Deadline question function, uses props to get the state value "selected" from Home.jsx
 //setSelected is a function to update selected value
-export default function EnergyQuestion({selected, setSelected}) {
-    //Energy Options
-    //JS array of objects (energys)
-    const energyOptions = [
+export default function DeadlinesQuestion({selected, setSelected}) {
+    //Deadline Options
+    //JS array of objects (deadliness)
+    const deadlineOptions = [
       {
-        label: "Exhausted",
+        label: "Low      - (No deadlines in the next week)",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "exhausted",
+        value: "low"
       },
       {
-        label: "Low Energy",
+        label: "Medium - (Deadlines in the next week)",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "lowEnergy",
+        value: "medium"
       },
       {
-        label: "Neutral",
+        label: "High     - (Deadlines in the next 3 days)",
         unclicked: purpleUnclickedHeart,
         clicked: purpleClickedHeart,
-        value: "neutral",
-      },
-      {
-        label: "Energized",
-        unclicked: pinkUnclickedHeart,
-        clicked: pinkClickedHeart,
-        value: "energized",
-      },
-      {
-        label: "Extremely Energized",
-        unclicked: blueUnclickedHeart,
-        clicked: blueClickedHeart,
-        value: "extremelyEnergized",
+        value: "high"
       },
     ];
   
@@ -48,8 +36,8 @@ export default function EnergyQuestion({selected, setSelected}) {
         //Buttons parent div container
         <div className="flex flex-col w-full items-start ml-[clamp(16px,4vw,60px)]">
           
-          {/*For every object inside energyOptions array this creates a button*/}
-          {energyOptions.map((option) => {
+          {/*For every object inside deadlineOptions array this creates a button*/}
+          {deadlineOptions.map((option) => {
             //checks if selected equals value and if so is shows the clicked heart image
             const isSelected=selected===option.value;
 
@@ -65,16 +53,16 @@ export default function EnergyQuestion({selected, setSelected}) {
               <button
                 key={option.value}
                 type="button"
-                //When clicked, it updates the state and logs which energy was selected
+                //When clicked, it updates the state and logs which deadline was selected
                 onClick={() => {
                   //sends selected value back to Home.jsx
                   setSelected(option.value);
-                  console.log("Selected energy:", option.value);
+                  console.log("Selected deadline:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"
               >
                 {/*Button heart images*/}
-                  <img
+                <img
                     src={heartImage}
                     alt="heart button"
                     className="h-[clamp(18px,3.3vw,50px)]"

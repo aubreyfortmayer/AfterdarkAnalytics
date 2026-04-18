@@ -5,42 +5,42 @@ import purpleClickedHeart from "../assets/purpleClickedHeart.png";
 import blueClickedHeart from "../assets/blueClickedHeart.png";
 import pinkClickedHeart from "../assets/pinkClickedHeart.png";
 
-
-//Energy question function, uses props to get the state value "selected" from Home.jsx
+//Mood question function, uses props to get the state value "selected" from Home.jsx
 //setSelected is a function to update selected value
-export default function EnergyQuestion({selected, setSelected}) {
-    //Energy Options
-    //JS array of objects (energys)
-    const energyOptions = [
+export default function MoodQuestion({selected, setSelected}){
+
+    //Mood Options
+    //JS array of objects (moods)
+    const moodOptions = [
       {
-        label: "Exhausted",
+        label: "Stressed",
         unclicked: pinkUnclickedHeart,
         clicked: pinkClickedHeart,
-        value: "exhausted",
-      },
-      {
-        label: "Low Energy",
-        unclicked: blueUnclickedHeart,
-        clicked: blueClickedHeart,
-        value: "lowEnergy",
+        value: "stressed",
       },
       {
         label: "Neutral",
-        unclicked: purpleUnclickedHeart,
-        clicked: purpleClickedHeart,
+        unclicked: blueUnclickedHeart,
+        clicked: blueClickedHeart,
         value: "neutral",
       },
       {
-        label: "Energized",
-        unclicked: pinkUnclickedHeart,
-        clicked: pinkClickedHeart,
-        value: "energized",
+        label: "Sad",
+        unclicked: purpleUnclickedHeart,
+        clicked: purpleClickedHeart,
+        value: "sad",
       },
       {
-        label: "Extremely Energized",
+        label: "Relaxed",
+        unclicked: pinkUnclickedHeart,
+        clicked: pinkClickedHeart,
+        value: "relaxed",
+      },
+      {
+        label: "Happy",
         unclicked: blueUnclickedHeart,
         clicked: blueClickedHeart,
-        value: "extremelyEnergized",
+        value: "happy",
       },
     ];
   
@@ -48,11 +48,11 @@ export default function EnergyQuestion({selected, setSelected}) {
         //Buttons parent div container
         <div className="flex flex-col w-full items-start ml-[clamp(16px,4vw,60px)]">
           
-          {/*For every object inside energyOptions array this creates a button*/}
-          {energyOptions.map((option) => {
+          {/*For every object inside moodOptions array this creates a button*/}
+          {moodOptions.map((option) => {
             //checks if selected equals value and if so is shows the clicked heart image
             const isSelected=selected===option.value;
-
+            
             //Heart image that is displayed
             let heartImage;
             if (isSelected) {
@@ -65,11 +65,11 @@ export default function EnergyQuestion({selected, setSelected}) {
               <button
                 key={option.value}
                 type="button"
-                //When clicked, it updates the state and logs which energy was selected
+                //When clicked, it updates the state and logs which mood was selected
                 onClick={() => {
                   //sends selected value back to Home.jsx
                   setSelected(option.value);
-                  console.log("Selected energy:", option.value);
+                  console.log("Selected mood:", option.value);
                 }}
                 className="flex gap-4 w-full cursor-pointer"
               >
@@ -87,3 +87,13 @@ export default function EnergyQuestion({selected, setSelected}) {
 
     );
   }
+
+
+
+
+
+
+
+
+
+
