@@ -42,7 +42,7 @@ export default function ResultsBox({probability}) {
                 className = "w-[clamp(220px, 40vw, 420px)]"
             />
 
-        <div className="absolute text-center"
+        <div className="absolute text-center px-[clamp(8px, 2vw, 20px)]"
         style ={{fontFamily: "'Emilys Candy', cursive"}}
         >
             
