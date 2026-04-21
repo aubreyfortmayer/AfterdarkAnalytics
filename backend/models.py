@@ -6,7 +6,7 @@ class Responses(Base):
     __tablename__ = "responses"
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     
-    forecasted_weather: Mapped[str] = mapped_column(nullable=False)
+    forecasted_weather: Mapped[str] = mapped_column(nullable=True)
     mood_level: Mapped[str] = mapped_column(nullable=False)
     energy_level: Mapped[str] = mapped_column(nullable=False)
     responsibility_level: Mapped[str] = mapped_column(nullable=False)

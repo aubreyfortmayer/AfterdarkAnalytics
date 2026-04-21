@@ -61,7 +61,8 @@ export default function Home() {
 
         try {
             const payload = {
-                forecasted_weather: "Clear Skies",
+                latitude: 29.6489,
+                longitude: -82.3251,
                 mood_level: mood,
                 energy_level: energy,
                 responsibility_level: deadlines

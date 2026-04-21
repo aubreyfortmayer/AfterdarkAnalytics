@@ -2,7 +2,7 @@ import MartiniGlass from "../assets/martiniglass.png"
 import ProbabilityLiquid from "../assets/ProbabilityLiquid.png"
 
 //default --> prob = 50
-export default function Martini({probability = 50}) {
+export default function Martini({probability}) {
     return(
 
     //container, will hold everything else (relative)

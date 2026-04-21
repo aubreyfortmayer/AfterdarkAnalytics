@@ -6,6 +6,8 @@ from schemas.response_schemas import ResponseCreate
 from database import get_db
 import pandas as pd
 import joblib
+from weather.map_weather import map_weather
+from weather.open_meteo import fetch_weather
 
 router = APIRouter()
 
@@ -20,11 +22,18 @@ ord_responsibility = joblib.load(open("routers/models/ordinal_responsibility.pkl
 weather_categories = ["Clear Skies", "Cold", "Rain", "Warm"]
 
 @router.post("/predict/", response_model=RecommendationResponse)
-def predict(payload: ResponseCreate, db: Session = Depends(get_db)):
+async def predict(payload: ResponseCreate, db: Session = Depends(get_db)):
     response = create_response(db, payload)
 
+    weather = await fetch_weather(payload.latitude, payload.longitude)
+    temp_c = weather["temperature"]
+    weathercode = weather["weathercode"]
+
+    mapped_weather = map_weather(temp_c, weathercode)
+    print(mapped_weather)
+
     # encode weather
-    weather_df = pd.DataFrame([[payload.forecasted_weather]], columns=["Forecasted Weather"])
+    weather_df = pd.DataFrame([[mapped_weather]], columns=["Forecasted Weather"])
     weather_encoded = ohe_weather.transform(weather_df)
     weather_df_encoded = pd.DataFrame(weather_encoded, columns=ohe_weather.get_feature_names_out(["Forecasted Weather"]))
 
@@ -48,6 +57,8 @@ def predict(payload: ResponseCreate, db: Session = Depends(get_db)):
         "responsibility_ord": [responsibility_ord],
         "mood_x_responsibility": [mood_x_resp]
     })], axis=1)
+
+    #feature_df = feature_df.index(columns=model.feature_names_in_)
 
     # make prediction
     pred_prob = model.predict_proba(feature_df)[:,1][0]

@@ -9,7 +9,7 @@ def create_response(db: Session, response: response_schemas.ResponseCreate):
     
     new_response = Responses(
         #user_id= 1,
-        forecasted_weather=response.forecasted_weather,
+        #forecasted_weather=response.forecasted_weather,
         energy_level=response.energy_level,
         mood_level=response.mood_level,
         responsibility_level=response.responsibility_level,

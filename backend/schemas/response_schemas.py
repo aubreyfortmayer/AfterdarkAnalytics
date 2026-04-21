@@ -1,18 +1,14 @@
 from pydantic import BaseModel
-from datetime import datetime
-
 # schemas for data validation
 
 class ResponseBase(BaseModel):
-    #user_id: int
-    forecasted_weather: str
     mood_level: str
     energy_level: str
     responsibility_level: str
 
 class ResponseCreate(ResponseBase):
-    #submitted_at: datetime
-    pass
+    latitude: float
+    longitude: float
 
 class Response(ResponseBase):
     id: int

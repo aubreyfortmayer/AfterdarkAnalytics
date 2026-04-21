@@ -23,8 +23,6 @@ export default function Results() {
     }
 
     const { will_go_out, prediction, probability } = data;
-    const probabilityPercentage = probability * 100;
-
 
     return (
         // visualization purposes (for my sake): flex flex-col: stacks vertically, items-center: centers horizontally, px-4: padding left or right, py: padding top or bottom
@@ -57,6 +55,7 @@ export default function Results() {
 
                     </div>
                 
+                 <Martini probability= {probability}/>
 
 
                 {/*items vertically stacked but everything centered horizontally, gap bt items */}
