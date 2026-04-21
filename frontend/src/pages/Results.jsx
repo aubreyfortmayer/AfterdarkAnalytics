@@ -24,8 +24,7 @@ export default function Results() {
         );
     }
 
-    const { will_go_out, prediction, probability } = data;
-
+    const {will_go_out, prediction, probability } = data;
 
     return (
         //stack vertical (flex)
@@ -69,7 +68,7 @@ export default function Results() {
                 />
                 
                 
-                 <Martini probability={probability}/>
+                 <Martini probability= {probability}/>
 
                 </div>
                 
@@ -100,7 +99,7 @@ export default function Results() {
             className = "absolute top-[560px] left-[30%] w-[70px]"
             />
         
-            <ResultsShareImage />
+            <ResultsShareImage probability = {probability}/>
     
         </div>
 

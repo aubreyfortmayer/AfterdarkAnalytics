@@ -5,14 +5,13 @@ import goOutImage from "../assets/goOutImage.png"
 import stayInImage from "../assets/stayInImage.png"
 import shareButton from "../assets/shareButton.png";
 
-export default function ResultsShareImage(){
-
+export default function ResultsShareImage({probability}){
     //tracking if image popup is shown
     const [showPopup, setShowPopup] = useState(false);
     //tracking element to turn into png image later
     const resultsShareImage = useRef(null);
     //TO DO: change to actual result value later
-    const resultPercent=76;
+    const resultPercent= Math.round(probability * 100);
     const isGoOut = resultPercent > 50;
     //if isGoOut is true, do 1st option, if not then stay in & use 2nd option
     const backgroundImage = isGoOut ? goOutImage : stayInImage;

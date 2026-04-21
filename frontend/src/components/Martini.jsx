@@ -3,7 +3,7 @@ import ProbabilityLiquid from "../assets/ProbabilityLiquid.png"
 
 //probability for the animation, but not fully implemented yet
 //default --> prob = 50
-export default function Martini({probability = 50}) {
+export default function Martini({probability}) {
     return(
 
     //container, will hold everything else (relative)

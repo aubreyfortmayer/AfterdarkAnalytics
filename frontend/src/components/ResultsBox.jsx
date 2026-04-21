@@ -1,25 +1,26 @@
 import ResultsBoxPicture from "../assets/ResultsBox.png"
 
 export default function ResultsBox({probability}) {
-    function showMessage(probability) {
+    const resultPercent = Math.round(probability * 100)
+    function showMessage(resultPercent) {
         let message = ""
 
-        if (probability >= 90) {
+        if (resultPercent >= 90) {
             message = "YES! The city needs you, diva"
             return message
         }
 
-        else if (probability >= 70) {
+        else if (resultPercent >= 70) {
             message = "I see the vision, you should go!"
             return message
         }
 
-        else if (probability >= 50) {
+        else if (resultPercent >= 50) {
             message = "Could be fun for the plot..."
             return message
         }
 
-        else if (probability >= 30){
+        else if (resultPercent >= 30){
             message = "Ehhh maybe some other time? Baddies need their rest too"
             return message
         }
@@ -46,11 +47,11 @@ export default function ResultsBox({probability}) {
         >
             
             <h2 className="text-4xl">
-                {probability}% </h2>
+                {resultPercent}% </h2>
 
 
             <p className = "text-2xl mt-5">
-                {showMessage(probability)}
+                {showMessage(resultPercent)}
                 </p> 
         </div>
                    
