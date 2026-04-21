@@ -67,11 +67,7 @@ export default function Results() {
                         src={MartiniStickers}
                         className="w-[clamp(80px, 8vw, 120px)]"
                     />
-
-                    <Martini probability={probabilityPercentage}/>
-       
-       
-
+ 
                 </div>
             </div>
 
@@ -79,7 +75,7 @@ export default function Results() {
 
                 {/*centered horizontally*/}
                 <div className = "flex flex-col items-center gap-6">
-                    <ResultsBox probability={probabilityPercentage}/>
+                    <ResultsBox probability={probability}/>
 
                 </div>
 
@@ -95,7 +91,7 @@ export default function Results() {
 
 
             <div className = "flex justify-center mt-[clamp(20px, 6vw, 60px)]">
-                <ResultsShareImage />
+                <ResultsShareImage probability={probability} />
                 </div> 
 
    

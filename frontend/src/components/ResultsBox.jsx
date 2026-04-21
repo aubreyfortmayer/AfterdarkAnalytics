@@ -47,11 +47,11 @@ export default function ResultsBox({probability}) {
         >
             
             <h2 className="text-[40px]">
-                {Math.round(probability)}% </h2>
+                {resultPercent}% </h2>
 
 
             <p className = "text-[clamp(28px,2.5vw,30px)]">
-                {showMessage(probability)}
+                {showMessage(resultPercent)}
                 </p> 
         </div>
                    
