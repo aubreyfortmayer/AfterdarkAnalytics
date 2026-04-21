@@ -1,12 +1,10 @@
 import { useLocation } from "react-router-dom";
 import MusicPlayer from "../components/MusicPlayer";
-import Heart from "../assets/heartMusicButton.png";
-import Star from "../assets/starMusicButton.png";
-import Title from "../assets/ResultsTitle.png";
+import ResultsTitle from "../assets/TitleResults.png";
 import SpinTheBottle from "../components/SpinTheBottle"
 import Martini from "../components/Martini"
 import MartiniStickers from "../assets/MartiniSticker.png"
-import CuteKissMark from "../assets/100CuteKiss.png"
+import CuteKissMark from "../assets/100Cute.png"
 import ResultsShareImage from "../components/ResultsShareImage";
 import ResultsBox from "../components/ResultsBox"
 
@@ -25,84 +23,84 @@ export default function Results() {
     }
 
     const { will_go_out, prediction, probability } = data;
+    const probabilityPercentage = probability * 100;
 
 
     return (
-        //stack vertical (flex)
-        // center everything horizontally (items-center), 
-        // text center (text-center), 
-        //minimum height, need extra height so 140 (min-h-[140vh])
-        //w-full, full width of container used
-        //max width = 900 px (max-w-[900px])
-        <div className="relative w-full min-h-[1100px] bg-[#fcddec] overflow-visible">
-            
-            <img 
-            src = {Title}
-            //mt-10, moving the title down from the top of the page
-            className = "absolute top-8 left-1/2 -translate-x-1/2 w-[360px]"
-            />
+        // visualization purposes (for my sake): flex flex-col: stacks vertically, items-center: centers horizontally, px-4: padding left or right, py: padding top or bottom
+        <div className="relative w-full min-h-screen bg-[#fcddec] flex flex-col items-center px-4 py-6">
+        
+                <div className = "flex flex-col items-center text-center">
+                    <img 
+                    src = {ResultsTitle}
+                    //clamping wasn't working here, small and medium screens
+                    className = "mx-auto w-[800px] md:w-[750px]"
+                    />
 
-            <img 
-                src = {CuteKissMark}
-                alt = "100% Cute!"
-                className = "absolute w-[250px] rotate-[10deg] right-8 top-20"
-            />
-
-
-            {/*layout box, mt-20 moving it from elemennt ABOVE it, so the title page
-                relative, items inside the box will position themselves based on
-                this box, NOT the page
-            */}
-            <div className = "absolute top-[180px] left-1/2 -translate-x-1/2">
-                {/*centered horizontally + moved 35 px to right*/}
-                          <SpinTheBottle/>
+                    <div className= "mt-20 flex justify-center">
+                        <div className= "scale-[0.85] md: scale-[0.8] translate-x-[10%]">                    
+                        <SpinTheBottle/>                     
+                    </div>
+                </div>
+ 
+                </div>
+        
+            {/* </div> */}
+                   
+             {/*md: flex-col, we want to stack everything vertically, mt: adding space bt each component*/}   
+            <div className= "w-full max-w-[1000px] flex flex-col md:flex-row items-center justify-center gap-[clamp(20px, 6vw, 80px)] mt-[clamp(20px, 6vw, 80px)]">
+                
+                {/*left*/}
+                <div className = "flex flex-col items-center gap-4">
+                    <div className= "flex flex-col items-center gap-2">
+ 
 
                     </div>
-                   
+                
 
-                {/*absolute, placed within the relative container*/}
-                <div className = "absolute left-20 top-[360px] scale-[1.25]">
-                
-                <img
-                src = {MartiniStickers}
-                className = " w-[195px] mb-2"
-                />
-                
-                
-                 <Martini probability={probability}/>
+
+                {/*items vertically stacked but everything centered horizontally, gap bt items */}
+                <div className="flex flex-col items-center gap-2">
+ 
+                    
+                    
+                    <img
+                        src={MartiniStickers}
+                        className="w-[clamp(80px, 8vw, 120px)]"
+                    />
+
+                    <Martini probability={probabilityPercentage}/>
+       
+       
 
                 </div>
-                
-                <div className= "absolute right-[120px] top-[380px]">
-                    <ResultsBox probability = {probability}/>
-                    </div>
-               
-     
+            </div>
 
-            {/*mt-auto, the music button is pushed down as far as it can be */}
-            <div className = "absolute left-[38%] top-[870px] flex items-center gap-4"> 
+                {/* right */}
+
+                {/*centered horizontally*/}
+                <div className = "flex flex-col items-center gap-6">
+                    <ResultsBox probability={probabilityPercentage}/>
+
+                </div>
+
+
+            </div>
+                
+
+            {/* space depending on clamp + screen size */}
+            <div className = "mt-[clamp(30px, 8vw, 120px)]"> 
                 {/*music button positioned towards bottom */}
                 <MusicPlayer />
-                </div>
-        
-                
-                
-                
-            {/* heart sticker, top-8.5, move to the top, right - used exact pixel values*/}
-            <img 
-            src = {Heart}
-            className = "absolute top-[470px] left-[48%] w-[80px]" 
-            />
-            
-            {/*star sticker, -left makes the pixel value negative*/}
-            <img 
-            src = {Star}
-            className = "absolute top-[560px] left-[30%] w-[70px]"
-            />
-        
-            <ResultsShareImage />
-    
-        </div>
+            </div>
 
+
+            <div className = "flex justify-center mt-[clamp(20px, 6vw, 60px)]">
+                <ResultsShareImage />
+                </div> 
+
+   
+             </div>
     );
+    
 }
