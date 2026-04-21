@@ -1,7 +1,7 @@
 import {useState} from "react";
 import bottle from "../assets/bottle.png"
 import spinBoard from "../assets/spinBoard.png"
-
+import CuteKissMark from "../assets/100Cute.png"
 
 export default function SpinTheBottle() {
     //beginning at 0 degrees, setRotation will update that value 
@@ -33,12 +33,18 @@ export default function SpinTheBottle() {
         className = "w-[70%] transition-transform duration-[3000ms] cursor-pointer"
         style ={{
             //rotates the bottle!, translated to perfect the position of beer bottle
-            transform: `translate(-25%, -35%) rotate(${rotation}deg)`,
+            transform: `translate(-20%, -25%) rotate(${rotation}deg)`,
             
             //where the bottle rotates
             transformOrigin: "50% 70%" 
         }}
         alt = "Bottle"
+        />
+
+        <img 
+        src={CuteKissMark}
+        className="absolute left-[35vw] bottom-[26vh] w-[clamp(22px, 6vw, 20px)] rotate-[10deg] scale-[0.45]"
+
     />
 </div>);
   

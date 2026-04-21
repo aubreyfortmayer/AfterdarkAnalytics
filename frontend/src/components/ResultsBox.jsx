@@ -21,7 +21,7 @@ export default function ResultsBox({probability}) {
         }
 
         else if (probability >= 30){
-            message = "Ehhh maybe some other time? Baddies need their rest too"
+            message = "Baddies need their rest too..."
             return message
         }
         
@@ -46,11 +46,11 @@ export default function ResultsBox({probability}) {
         style ={{fontFamily: "'Emilys Candy', cursive"}}
         >
             
-            <h2 className="text-[clamp(18px, 4vw, 36px)]">
-                {probability}% </h2>
+            <h2 className="text-[40px]">
+                {Math.round(probability)}% </h2>
 
 
-            <p className = "text-[clamp(12px,2.5vw,24px)]">
+            <p className = "text-[clamp(28px,2.5vw,30px)]">
                 {showMessage(probability)}
                 </p> 
         </div>

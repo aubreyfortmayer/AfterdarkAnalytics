@@ -2,6 +2,8 @@ import MusicSymbolMoon from "../assets/MusicSymbolMoon.png"
 
 export default function MusicPlayer() {
 
+    //embedded a spotify playlist! 
+    //from: https://developer.spotify.com/documentation/embeds
 return (
     <div className="flex justify-center items-center gap-6 mt-8">
         <iframe data-testid="embed-iframe" 
